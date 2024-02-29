@@ -1,0 +1,6 @@
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.csproj.AssemblyReference.cache
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.AssemblyInfoInputs.cache
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.AssemblyInfo.cs
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.csproj.CoreCompileInputs.cache
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.sourcelink.json
