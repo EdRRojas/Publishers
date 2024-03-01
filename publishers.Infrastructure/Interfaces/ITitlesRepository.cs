@@ -1,15 +1,17 @@
 ﻿
 using publishers.Domain.Entities;
+using publishers.Domain.Repository;
+using publishers.Infrastructure.Models;
 
 namespace publishers.Infrastructure.Interfaces
 {
-    public interface ITitlesRepository
+    public interface ITitlesRepository : IBaseRepository<Titles, string> 
     {
-        void Create(Titles titles);
-        Titles GetTitleByID(string title_id);
-        void Update(Titles titles);
-        void Remote(Titles titles);
-
-        
+        TitlesModel GetTitleByName (string title);
+        List<TitlesModel> GetTitlesByType(string type);
+        List<TitlesModel> GetTitlesByPub(string pub_id);
+        List<TitlesModel> GetTitlesByUnderPrice(decimal price);
+        List<TitlesModel> GetTitlesByOnPrice(decimal price);
+        TitlesModel GetTitleSalesByID(int ytd_sales);
     }
 }
