@@ -1,7 +1,7 @@
 ﻿
 namespace publishers.Domain.Entities
 {
-    public class Jobs
+    public class Jobs : BaseEntity
     {
         public int? job_id { get; set; }
         public string? job_desc { get; set; }

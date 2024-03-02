@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using publishers.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace publishers.Infrastructure.Contex
 {
-    internal class PubsContex
+    public class PubsContex : DbContext
     {
+        public PubsContex(DbContextOptions<PubsContex> options) : base(options) 
+        {
+
+        }
+
+        public DbSet<Jobs> jobs {  get; set; } 
     }
 }
