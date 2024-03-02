@@ -31,3 +31,36 @@ E:\Visual Studio 2022\Publishers\publishers.Api\obj\Debug\net6.0\refint\publishe
 E:\Visual Studio 2022\Publishers\publishers.Api\obj\Debug\net6.0\publishers.Api.pdb
 E:\Visual Studio 2022\Publishers\publishers.Api\obj\Debug\net6.0\publishers.Api.genruntimeconfig.cache
 E:\Visual Studio 2022\Publishers\publishers.Api\obj\Debug\net6.0\ref\publishers.Api.dll
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\bin\Debug\net6.0\appsettings.json
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\bin\Debug\net6.0\publishers.Api.exe
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\bin\Debug\net6.0\publishers.Api.deps.json
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\bin\Debug\net6.0\publishers.Api.runtimeconfig.json
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\bin\Debug\net6.0\publishers.Api.dll
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\bin\Debug\net6.0\publishers.Api.pdb
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\obj\Debug\net6.0\publishers.Api.csproj.AssemblyReference.cache
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\obj\Debug\net6.0\publishers.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\obj\Debug\net6.0\publishers.Api.AssemblyInfoInputs.cache
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\obj\Debug\net6.0\publishers.Api.AssemblyInfo.cs
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\obj\Debug\net6.0\publishers.Api.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\obj\Debug\net6.0\publishers.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\obj\Debug\net6.0\publishers.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\obj\Debug\net6.0\publishers.Api.sourcelink.json
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\obj\Debug\net6.0\staticwebassets\msbuild.publishers.Api.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\obj\Debug\net6.0\staticwebassets\msbuild.build.publishers.Api.props
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.publishers.Api.props
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.publishers.Api.props
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\obj\Debug\net6.0\scopedcss\bundle\publishers.Api.styles.css
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\obj\Debug\net6.0\publishe.2E55C7D2.Up2Date
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\obj\Debug\net6.0\publishers.Api.dll
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\obj\Debug\net6.0\refint\publishers.Api.dll
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\obj\Debug\net6.0\publishers.Api.pdb
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\obj\Debug\net6.0\publishers.Api.genruntimeconfig.cache
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Api\obj\Debug\net6.0\ref\publishers.Api.dll

@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "biUXY/yJLdiPQ84Mbu3gLfF1K64k8tDl2WShkdv6h+AvKkzuFJ5Idbp4Ddw0B/EwntuWEhwpgW2HJeoh2+UFXQ==",
+  "dgSpecHash": "QuHkz3vUWG+snB1uZQUbY/8UGCboj7Jn56x5LOzE4kp/LE6USyfCUYRng4RBHFcUz7f8jOzH6nld7UWbgcK0Qw==",
   "success": true,
-  "projectFilePath": "E:\\Visual Studio 2022\\Publishers\\publishers.Domain\\publishers.Domain.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Para Estudiar.DESKTOP-GHCQPP3\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\Para Estudiar.DESKTOP-GHCQPP3\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\Para Estudiar.DESKTOP-GHCQPP3\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\Gabriel Rodriguez\\Desktop\\Publishers\\publishers.Domain\\publishers.Domain.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
