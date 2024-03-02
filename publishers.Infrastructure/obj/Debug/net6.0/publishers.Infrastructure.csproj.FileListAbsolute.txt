@@ -4,3 +4,13 @@ E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publ
 E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.AssemblyInfo.cs
 E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.csproj.CoreCompileInputs.cache
 E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.sourcelink.json
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\bin\Debug\net6.0\publishers.Infrastructure.deps.json
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\bin\Debug\net6.0\publishers.Infrastructure.dll
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\bin\Debug\net6.0\publishers.Infrastructure.pdb
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\bin\Debug\net6.0\publishers.Domain.dll
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\bin\Debug\net6.0\publishers.Domain.pdb
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.csproj.CopyComplete
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.dll
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\refint\publishers.Infrastructure.dll
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.pdb
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\ref\publishers.Infrastructure.dll

@@ -1,10 +1,12 @@
 ﻿using publishers.Domain.Core;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace publishers.Domain.Entities
 {
     public class Titles : BaseEntity
     {
+        [Key]
         public string? title_id {  get; set; }
         public string? title { get; set; }
         public string? type { get; set; }

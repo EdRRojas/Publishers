@@ -1927,7 +1927,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Para Estudiar.DESKTOP-GHCQPP3\\.nuget\\packages\\": {}
+    "C:\\Users\\Para Jugar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -1935,11 +1935,11 @@
       "projectUniqueName": "E:\\Visual Studio 2022\\Publishers\\publishers.Infrastructure\\publishers.Infrastructure.csproj",
       "projectName": "publishers.Infrastructure",
       "projectPath": "E:\\Visual Studio 2022\\Publishers\\publishers.Infrastructure\\publishers.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\Para Estudiar.DESKTOP-GHCQPP3\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Para Jugar\\.nuget\\packages\\",
       "outputPath": "E:\\Visual Studio 2022\\Publishers\\publishers.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Para Estudiar.DESKTOP-GHCQPP3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Para Jugar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -21,7 +21,7 @@ namespace publishers.Infrastructure.Repositories
             this.logger = logger;
         }        
         public override List<Titles> GetEntities()
-        {
+        {            
             return base.GetEntities().Where(ti => !ti.deleted).ToList();
         }
         public override void Create(Titles titles)
@@ -41,20 +41,23 @@ namespace publishers.Infrastructure.Repositories
         public override void Update(Titles titles)
         {
             try { 
-            var TitlesToUpdate = this.GetEntity(titles.title_id);
+                var TitlesToUpdate = this.GetEntity(titles.title_id);
 
-            TitlesToUpdate.title = titles.title;
-            TitlesToUpdate.type = titles.type;
-            TitlesToUpdate.price = titles.price;
-            TitlesToUpdate.advance = titles.advance;
-            TitlesToUpdate.royalty = titles.royalty;
-            TitlesToUpdate.ytd_sales = titles.ytd_sales;
-            TitlesToUpdate.notes = titles.notes;
-            TitlesToUpdate.userMod = titles.userMod;
-            TitlesToUpdate.modifyDate = titles.modifyDate;
+                if (TitlesToUpdate is null)
+                    throw new TitlesException("Esta entidad no existe");
 
-            this.context.titles.Update(TitlesToUpdate);
-            this.context.SaveChanges();
+                TitlesToUpdate.title = titles.title;
+                TitlesToUpdate.type = titles.type;
+                TitlesToUpdate.price = titles.price;
+                TitlesToUpdate.advance = titles.advance;
+                TitlesToUpdate.royalty = titles.royalty;
+                TitlesToUpdate.ytd_sales = titles.ytd_sales;
+                TitlesToUpdate.notes = titles.notes;
+                TitlesToUpdate.userMod = titles.userMod;
+                TitlesToUpdate.modifyDate = titles.modifyDate;
+
+                this.context.titles.Update(TitlesToUpdate);
+                this.context.SaveChanges();
             }
             catch(Exception ex)
             {
@@ -63,15 +66,20 @@ namespace publishers.Infrastructure.Repositories
         }
         public override void Remove(Titles titles)
         {
-            try { 
-            var TitleToRemove = this.GetEntity(titles.title_id);
+            try {
+                if (titles.title_id == null)
+                    throw new TitlesException("Este libro no existe");
+                var TitleToRemove = this.GetEntity(titles.title_id);
 
-            TitleToRemove.deleted = true;
-            TitleToRemove.userDeleted = titles.userDeleted;
-            TitleToRemove.deleteTime = titles.deleteTime;
+                if (TitleToRemove is null)
+                    throw new TitlesException("Este libro no existe");
 
-            this.context.titles.Update(TitleToRemove);
-            this.context.SaveChanges();
+                TitleToRemove.deleted = true;
+                TitleToRemove.userDelete = titles.userDelete;
+                TitleToRemove.deleteTime = titles.deleteTime;
+
+                this.context.titles.Update(TitleToRemove);
+                this.context.SaveChanges();
             }
             catch(Exception ex)
             {
@@ -116,6 +124,9 @@ namespace publishers.Infrastructure.Repositories
             List<TitlesModel> Title = new List<TitlesModel>();
             try
             {
+                if (!base.Exists(ti => ti.type == types))
+                    throw (new Exception("Esta categoria no existe"));
+
                 Title = (from tit in this.context.titles
                          join pub in this.context.publishers on tit.pub_id equals pub.pub_id
                          where tit.type == types

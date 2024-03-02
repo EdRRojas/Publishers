@@ -10,11 +10,11 @@
         "projectUniqueName": "E:\\Visual Studio 2022\\Publishers\\publishers.UnitTest\\publishers.UnitTest.csproj",
         "projectName": "publishers.UnitTest",
         "projectPath": "E:\\Visual Studio 2022\\Publishers\\publishers.UnitTest\\publishers.UnitTest.csproj",
-        "packagesPath": "C:\\Users\\Para Estudiar.DESKTOP-GHCQPP3\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Para Jugar\\.nuget\\packages\\",
         "outputPath": "E:\\Visual Studio 2022\\Publishers\\publishers.UnitTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Para Estudiar.DESKTOP-GHCQPP3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Para Jugar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

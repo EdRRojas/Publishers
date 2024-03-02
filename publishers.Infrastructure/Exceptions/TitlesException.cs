@@ -6,6 +6,10 @@ namespace publishers.Domain.Exceptions
     {
         public TitlesException(string message) : base(message)
         {
+            SaveLog(message);
+        }
+        public void SaveLog(string message)
+        {
 
         }
     }
