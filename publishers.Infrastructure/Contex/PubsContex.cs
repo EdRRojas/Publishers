@@ -11,7 +11,7 @@ namespace publishers.Infrastructure.Contex
 
         }
 
-        public DbSet<Jobs> jobs {  get; set; } 
+        public DbSet<Jobs> jobs { get; set; }
 
         public DbSet<roysched> roysched { get; set; }
         public DbSet<TitleModel> titles { get; set; }

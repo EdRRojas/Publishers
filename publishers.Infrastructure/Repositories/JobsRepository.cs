@@ -26,7 +26,7 @@ namespace publishers.Infrastructure.Repositories
             }
             catch (Exception ex)
             {
-                this.logger.LogError("¡Ocurrio un erro creando el trabajo!",ex.ToString());
+               this.logger.LogError("¡Ocurrio un erro creando el trabajo!",ex.ToString());
             }
         }
 
@@ -34,7 +34,7 @@ namespace publishers.Infrastructure.Repositories
         {
             try
             {
-                var entityToUpdate = this.GetEntityById(job.job_id);
+                var entityToUpdate = this.GetEntityById((int)job.job_id);
 
                 entityToUpdate.job_id = job.job_id;
                 entityToUpdate.job_desc = job.job_desc;
@@ -54,16 +54,16 @@ namespace publishers.Infrastructure.Repositories
         {
             try
             {
-                var jobToUpdate = GetEntityById(job.job_id);
+                var jobToUpdate = GetEntityById((int)job.job_id);
 
                 jobToUpdate.job_id = job.job_id;
                 jobToUpdate.job_desc = job.job_desc;
                 jobToUpdate.min_lvl = job.min_lvl;
-                jobToUpdate.max_lvl= job.max_lvl;
+                jobToUpdate.max_lvl = job.max_lvl;
 
                 contex.jobs.Update(jobToUpdate);
                 contex.SaveChanges();
-                
+
 
             }
             catch (Exception ex)
@@ -84,7 +84,7 @@ namespace publishers.Infrastructure.Repositories
 
         public Jobs GetEntityById(int id)
         {
-            throw new NotImplementedException();
+           throw new NotImplementedException();
         }
 
         public Jobs GetJobByMax_lvl(int maxlvl)

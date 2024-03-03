@@ -5,7 +5,8 @@ using System;
 
 namespace publishers.Infrastructure.Core
 {
-    public abstract class BaseRepository<TEntity, TId> : IBaseRepository<TEntity, TId> where TEntity : class where TId : IEquatable<TId>
+    public abstract class BaseRepository<TEntity, TId> : IBaseRepository<TEntity, TId> where TEntity : class 
+        where TId : IEquatable<TId>
     {
         public readonly PubsContex contex;
         public readonly DbSet<TEntity> Dbentity;
@@ -33,6 +34,7 @@ namespace publishers.Infrastructure.Core
 
         public virtual List<TEntity> GetEntities()
         {
+            
             return Dbentity.ToList();
         }
 

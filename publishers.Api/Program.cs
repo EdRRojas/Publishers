@@ -1,6 +1,21 @@
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+using publishers.Infrastructure.Contex;
+using publishers.Infrastructure.Interfaces;
+using publishers.Infrastructure.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+//cnn string
+builder.Services.AddDbContext<PubsContex>(options => 
+options.UseSqlServer(builder.Configuration.GetConnectionString("PubsContex")));
+
+//repositories
+builder.Services.AddScoped<IRoyschedRepository, RoyschedRepository>();
+
+//App Service
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

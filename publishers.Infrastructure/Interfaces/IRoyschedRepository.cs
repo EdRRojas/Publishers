@@ -5,7 +5,7 @@ using publishers.Infrastructure.Models;
 
 namespace publishers.Infrastructure.Interfaces
 {
-    internal interface IRoyschedRepository : IBaseRepository<roysched, string>
+     public interface IRoyschedRepository : IBaseRepository<roysched, string>
     {
         List<RoyschedModel> GetRoyschedByTitleName(string title);
         List<RoyschedModel> GetRoyschedByLorange(int lorange);

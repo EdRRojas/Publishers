@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using publishers.Domain.Entities;
 using publishers.Domain.Repository;
 using publishers.Infrastructure.Contex;
@@ -23,12 +24,7 @@ namespace publishers.Infrastructure.Repositories
         {
             try
             {
-                
-                var royschedToAdd = GetEntityById(entity.title_id);
-
-                royschedToAdd.CreationDate = DateTime.Now;
-                this.contex.roysched.Add(royschedToAdd);
-
+                this.contex.roysched.Add(entity);
                 this.contex.SaveChanges();
             }
             catch (Exception ex)
@@ -71,7 +67,7 @@ namespace publishers.Infrastructure.Repositories
                 royschedToUpdate.royalty = entity.royalty;
 
                 royschedToUpdate.UserMod = entity.UserMod;
-                royschedToUpdate.ModifyTime = DateTime.Now;
+                royschedToUpdate.ModifyDate = DateTime.Now;
 
                 contex.roysched.Update(royschedToUpdate);
                 contex.SaveChanges();
@@ -82,9 +78,9 @@ namespace publishers.Infrastructure.Repositories
             }
         }
 
-        public List<roysched> GetEntities()
+         public override List<roysched> GetEntities()
         {
-            return base.GetEntities().Where(ti => !ti.Deleted).ToList();
+            return base.GetEntities();
         }
 
          public List<RoyschedModel> GetRoyschedByTitleName(string title)
@@ -119,11 +115,11 @@ namespace publishers.Infrastructure.Repositories
             return royscheds;
         }
 
-        List<RoyschedModel> IRoyschedRepository.GetRoyschedByLorange(int lorange)
+        public List<RoyschedModel> GetRoyschedByLorange(int lorange)
         {
             List<RoyschedModel> royscheds = new List<RoyschedModel>();
 
-            try
+           try
             {
                 if (!base.Exists(ro => ro.lorange == lorange))
                     throw new Exception("No se encontro el Low Range");
@@ -156,11 +152,11 @@ namespace publishers.Infrastructure.Repositories
 
         }
 
-        List<RoyschedModel> IRoyschedRepository.GetRoyschedByHirange(int hirange)
+        public List<RoyschedModel> GetRoyschedByHirange(int hirange)
         {
             List<RoyschedModel> royscheds = new List<RoyschedModel>();
 
-            try
+           try
             {
                 if (!base.Exists(ro => ro.hirange == hirange))
                     throw new Exception("No se encontro el High Range");
@@ -192,7 +188,7 @@ namespace publishers.Infrastructure.Repositories
             return royscheds;
         }
 
-        List<RoyschedModel> IRoyschedRepository.GetRoyschedByRoyalty(int royalty)
+        public List<RoyschedModel> GetRoyschedByRoyalty(int royalty)
         {
             List<RoyschedModel> royscheds = new List<RoyschedModel>();
 
