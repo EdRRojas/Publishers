@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using publishers.Api.Dtos.Roysched;
 using publishers.Api.Models;
+using publishers.Infrastructure.Exceptions;
 using publishers.Infrastructure.Interfaces;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace publishers.Api.Controllers
 {
@@ -19,7 +20,16 @@ namespace publishers.Api.Controllers
         [HttpGet ("GetRoysched")]
         public IActionResult Get()
         {
-            var royscheds = this.royschedRepository.GetEntities();
+            var royscheds = this.royschedRepository.GetEntities().Select(ro => new RoyschedGetModel()
+            {
+                title_id = ro.title_id,
+                lorange = ro.lorange,
+                hirange = ro.hirange,
+                royalty = ro.royalty,
+                CreationDate = ro.CreationDate,
+                CreationUser = ro.CreationUser,
+            });
+
             return Ok (royscheds);
         }
 
@@ -27,34 +37,66 @@ namespace publishers.Api.Controllers
         public IActionResult Get(string id)
         {
             var roysched = this.royschedRepository.GetEntityById(id);
-            return Ok (roysched);
+            RoyschedGetModel royschedGetModel = new RoyschedGetModel()
+            {
+                title_id = roysched.title_id,
+                lorange = roysched.lorange,
+                hirange = roysched.hirange,
+                royalty = roysched.royalty,
+                CreationDate = roysched.CreationDate,
+                CreationUser = roysched.CreationUser,
+            };
+            return Ok (royschedGetModel);
         }
 
-        // POST api/<RoyschedController>
         [HttpPost ("SaveRoysched")]
-        public void Post([FromBody] RoyschedAddModel royschedAddModel)
+        public IActionResult Post([FromBody] RoyschedAddDto royschedGetModel)
         {
             this.royschedRepository.Create(new Domain.Entities.roysched
             {
-                title_id = royschedAddModel.title_id,
-                lorange = royschedAddModel.lorange,
-                hirange = royschedAddModel.hirange,
-                royalty = royschedAddModel.royalty,
-                CreationDate = royschedAddModel.CreationDate,
-                CreationUser = royschedAddModel.CreationUser
+                title_id = royschedGetModel.title_id,
+                lorange = royschedGetModel.lorange,
+                hirange = royschedGetModel.hirange,
+                royalty = royschedGetModel.royalty,
+                CreationDate = royschedGetModel.CreationDate,
+                CreationUser = royschedGetModel.CreationUser
             });
+
+            return Ok ("Royshed guardado correctamente");
         }
 
-        // PUT api/<RoyschedController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+
+        [HttpPost("UpdateRoysched")]
+        public IActionResult Put([FromBody]RoyschedUpdateDto royschedUpdateDto)
         {
+            this.royschedRepository.Update(new Domain.Entities.roysched()
+            {
+                title_id = royschedUpdateDto.title_id,
+                lorange  = royschedUpdateDto.lorange,
+                hirange  = royschedUpdateDto .hirange,
+                royalty  = royschedUpdateDto .royalty,
+                UserMod  = royschedUpdateDto .userMod,
+                ModifyDate = royschedUpdateDto .modifyDate,
+            });
+
+            return Ok ("Royshed actualizado correctamente");
         }
 
-        // DELETE api/<RoyschedController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpPost("RemoveRoysched")]
+        public IActionResult Remove([FromBody] RoyschedRemoveDto royschedRemoveDto)
         {
+                this.royschedRepository.Remove(new Domain.Entities.roysched()
+                {
+                    title_id=royschedRemoveDto.title_id,
+                    royalty = royschedRemoveDto.royalty,
+                    hirange=royschedRemoveDto .hirange,
+                    lorange=royschedRemoveDto .lorange,
+                    UserDeleted = royschedRemoveDto.userDelete,
+                    DeleteTime = royschedRemoveDto .deleteTime,
+                    Deleted = royschedRemoveDto.deleted
+                });
+            return Ok("Royshed eliminado correctamente");
+
         }
     }
 }

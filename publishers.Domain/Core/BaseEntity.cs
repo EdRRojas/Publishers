@@ -8,7 +8,7 @@ namespace publishers.Domain.Core
         public BaseEntity()
         {
             CreationDate = DateTime.Now;
-            Deleted = false;
+            Deleted = 0;
 
         }
 
@@ -16,7 +16,7 @@ namespace publishers.Domain.Core
         public DateTime? CreationDate { get; set; }
 
         [Column("deteled")]
-        public bool? Deleted { get; set; }
+        public int? Deleted { get; set; }
 
         [Column("creationUser")]
         public int? CreationUser { get; set; }

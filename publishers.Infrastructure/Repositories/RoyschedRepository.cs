@@ -43,7 +43,7 @@ namespace publishers.Infrastructure.Repositories
                 var royschedToRomve = GetEntityById(entity.title_id);
 
                 royschedToRomve.UserDeleted = entity.UserDeleted;
-                royschedToRomve.Deleted = true;
+                royschedToRomve.Deleted = 1;
                 royschedToRomve.DeleteTime = DateTime.Now;
 
                 contex.roysched.Update(royschedToRomve);
