@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wlhhsI7QxDl0KVkFtWMYbeIfC1jvDVdn4W0Y0bZs/sknscEFZ3p76MUQuRKaF8LTXxn0YGz7d0LBz9nOV8ptOA==",
+  "dgSpecHash": "Iq9VZq/qSap4oj2JHaeLLUP35mYoYyPqBdXYzzBnvfitSM/rZxpwq6g76himhacEBvZDiwDfjkD8QWP+/Bll8A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ricky\\Source\\Repos\\Publishers\\piblishers.IntegrationTest\\publishers.IntegrationTest.csproj",
+  "projectFilePath": "C:\\Users\\Ricky\\source\\repos\\Publishers\\piblishers.IntegrationTest\\publishers.IntegrationTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ricky\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\Ricky\\.nuget\\packages\\microsoft.codecoverage\\17.5.0\\microsoft.codecoverage.17.5.0.nupkg.sha512",

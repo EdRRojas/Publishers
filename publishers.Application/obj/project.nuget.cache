@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QzVMUtpv7OkwGzGCY75ZXKkI+j3Eu/pPDDWWPRrA0wuM8YhSU94uUa+NY48Ykj1kToalgS8EcKczdvnbTbIvlw==",
+  "dgSpecHash": "/yMEqDm36o+enkUxNFm2LHBRQojDhLnVfKYGq6KW9nzIENC1DdfydE8/Kx25dTFZUwF8kG2/gD3j8GSs8CaNhg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ricky\\Source\\Repos\\Publishers\\publishers.Application\\publishers.Application.csproj",
+  "projectFilePath": "C:\\Users\\Ricky\\source\\repos\\Publishers\\publishers.Application\\publishers.Application.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

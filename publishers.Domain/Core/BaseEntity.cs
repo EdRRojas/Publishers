@@ -1,4 +1,5 @@
-﻿namespace publishers.Domain.Core
+﻿
+namespace publishers.Domain.Core
 {
     public  abstract class BaseEntity
     {
@@ -12,7 +13,7 @@
         public int? userMod { get; set; }
         public DateTime? modifyDate { get; set; }
         public int? userDeleted { get; set; }
-        public DateTime? deletedDate { get; set; }
+        public DateTime? deleteTime { get; set; }
         public bool deleted { get; set; }
     }
 }
