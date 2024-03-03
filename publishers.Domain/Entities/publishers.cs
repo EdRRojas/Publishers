@@ -2,7 +2,7 @@
 
 namespace publishers.Domain.Entities
 {
-    public class publishers : BaseEntity
+    public class Publishers : BaseEntity
     {
         public string? pub_id {  get; set; }
         public string? pub_name { get; set; }

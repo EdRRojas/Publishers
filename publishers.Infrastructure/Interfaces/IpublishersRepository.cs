@@ -4,9 +4,9 @@ namespace publishers.Infrastructure.Interfaces
 {
     public interface IpublishersRepository
     {
-        void create(publishers publishers);
-        Publishers GetPublishersByID (string publishers_Id);
-        void update(publishers publishers);
-        void Remote(publishers publishers);
+        void create(Publishers publishers);
+        Publishers GetPublishersByID (string pub_id);
+        void update(Publishers publishers);
+        void Remote(Publishers publishers);
     }
 }

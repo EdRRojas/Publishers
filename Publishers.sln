@@ -5,19 +5,19 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "publishers.Domain", "publishers.Domain\publishers.Domain.csproj", "{90EA43E4-5D51-47D8-83BA-C7A64AA64725}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "publishers.Infrastructure", "publishers.Infrastructure\publishers.Infrastructure.csproj", "{523E8EE4-F300-481E-A2D5-FCB2C1E3AFDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "publishers.Infrastructure", "publishers.Infrastructure\publishers.Infrastructure.csproj", "{523E8EE4-F300-481E-A2D5-FCB2C1E3AFDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "publishers.Application", "publishers.Application\publishers.Application.csproj", "{13E875E1-44E7-4ADE-99BB-07641915B49A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "publishers.Application", "publishers.Application\publishers.Application.csproj", "{13E875E1-44E7-4ADE-99BB-07641915B49A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "publishers.Api", "publishers.Api\publishers.Api.csproj", "{DD9C55A3-BF29-474B-8A8A-F16FCAA8CCCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "publishers.Api", "publishers.Api\publishers.Api.csproj", "{DD9C55A3-BF29-474B-8A8A-F16FCAA8CCCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "publishers.Web", "publishers.Web\publishers.Web.csproj", "{0E1BE9E6-2DF8-43BC-8207-59D93848DFB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "publishers.Web", "publishers.Web\publishers.Web.csproj", "{0E1BE9E6-2DF8-43BC-8207-59D93848DFB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "publishers.Ioc", "publishers.Ioc\publishers.Ioc.csproj", "{FF365841-74E6-477B-B4CE-A6221FD7CBD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "publishers.Ioc", "publishers.Ioc\publishers.Ioc.csproj", "{FF365841-74E6-477B-B4CE-A6221FD7CBD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "publishers.UnitTest", "publishers.UnitTest\publishers.UnitTest.csproj", "{8C948610-1D0F-486C-984B-66C0611F5F30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "publishers.UnitTest", "publishers.UnitTest\publishers.UnitTest.csproj", "{8C948610-1D0F-486C-984B-66C0611F5F30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "publishers.IntegrationTest", "piblishers.IntegrationTest\publishers.IntegrationTest.csproj", "{364B76D3-663A-4CF5-91FE-CD35D3F6D000}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "publishers.IntegrationTest", "piblishers.IntegrationTest\publishers.IntegrationTest.csproj", "{364B76D3-663A-4CF5-91FE-CD35D3F6D000}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
