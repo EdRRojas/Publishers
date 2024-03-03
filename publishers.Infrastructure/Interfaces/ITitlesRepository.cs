@@ -12,6 +12,6 @@ namespace publishers.Infrastructure.Interfaces
         List<TitlesModel> GetTitlesByPub(string pub_id);
         List<TitlesModel> GetTitlesByUnderPrice(decimal price);
         List<TitlesModel> GetTitlesByOnPrice(decimal price);
-        TitlesModel GetTitleSalesByID(int ytd_sales);
+        TitlesModel GetTitleSalesByID(string id);
     }
 }

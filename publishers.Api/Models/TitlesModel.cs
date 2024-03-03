@@ -1,6 +1,6 @@
 ﻿namespace publishers.Api.Models
 {
-    public class TitlesAddModel
+    public class TitlesModel
     {
         public string title_id { get; set; }
         public string title { get; set; }

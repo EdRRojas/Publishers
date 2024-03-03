@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Routing;
+using publishers.Api.Dtos.Titles;
 using publishers.Api.Models;
 using publishers.Infrastructure.Interfaces;
 
@@ -34,35 +36,97 @@ namespace publishers.Api.Controllers
 
         // POST api/<TitlesController>
         [HttpPost("CreateTitle")]
-        public void Post([FromBody] TitlesAddModel titlesAddModel)
+        public void Post([FromBody] TitlesAddDto titlesAddDto)
         {
             this.titlesRepository.Create(new publishers.Domain.Entities.Titles()
             {
-                title_id = titlesAddModel.title_id,
-                title = titlesAddModel.title,
-                type = titlesAddModel.type,
-                pub_id = titlesAddModel.pub_id,
-                price = titlesAddModel.price,
-                advance = titlesAddModel.advance,
-                royalty = titlesAddModel.royalty,
-                ytd_sales = titlesAddModel.ytd_sales,
-                notes = titlesAddModel.notes,
-                pubdate = titlesAddModel.pubdate,
-                creationUser = titlesAddModel.creationUser,
-                creationDate = titlesAddModel.creationDate
+                title_id = titlesAddDto.title_id,
+                title = titlesAddDto.title,
+                type = titlesAddDto.type,
+                pub_id = titlesAddDto.pub_id,
+                price = titlesAddDto.price,
+                advance = titlesAddDto.advance,
+                royalty = titlesAddDto.royalty,
+                ytd_sales = titlesAddDto.ytd_sales,
+                notes = titlesAddDto.notes,
+                pubdate = titlesAddDto.pubdate,
+                creationUser = titlesAddDto.UserId,
+                creationDate = titlesAddDto.modifyDate
             });
         }
 
         // PUT api/<TitlesController>/5
         [HttpPut("TitlesUpdate")]
-        public void Put([FromBody] TitlesAddModel titlesAddModel)
+        public void Put([FromBody] TitlesUpdateDto titlesUpdateDto)
         {
+            this.titlesRepository.Update(new Domain.Entities.Titles()
+            {
+                title_id = titlesUpdateDto.title_id,
+                title = titlesUpdateDto.title,
+                type = titlesUpdateDto.type,
+                pub_id = titlesUpdateDto.pub_id,
+                price = titlesUpdateDto.price,
+                advance = titlesUpdateDto.advance,
+                royalty = titlesUpdateDto.royalty,
+                ytd_sales = titlesUpdateDto.ytd_sales,
+                notes = titlesUpdateDto.notes
+            });
+
         }
 
         // DELETE api/<TitlesController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("TitleRemove")]
+        public void Delete([FromBody] TitlesDeleteDto titlesDeleteDto)
         {
+            this.titlesRepository.Remove(new Domain.Entities.Titles()
+            {
+                title_id= titlesDeleteDto.title_id,
+                deleted = true,
+                userDelete = titlesDeleteDto.UserId,
+                deleteTime = titlesDeleteDto.modifyDate
+            });
+        }
+
+        [HttpGet("GetTitlesByName")]
+        public IActionResult GetTitlesByName(string name)
+        {
+            var titles = this.titlesRepository.GetTitleByName(name);
+            return Ok(titles);
+        }
+
+        [HttpGet("GetTitlesByType")]
+        public IActionResult GetTitlesByType(string type)
+        {
+            var titles = this.titlesRepository.GetTitlesByType(type);
+            return Ok(titles);
+        }
+
+        [HttpGet("GetTitlesByPub")]
+        public IActionResult GetTitlesByPub(string pub)
+        {
+            var titles = this.titlesRepository.GetTitlesByPub(pub);
+            return Ok(titles);
+        }
+
+        [HttpGet("GetTitlesByUnderPrice")]
+        public IActionResult GetTitlesByUnderPrice(decimal price)
+        {
+            var titles = this.titlesRepository.GetTitlesByUnderPrice(price);
+            return Ok(titles);
+        }
+
+        [HttpGet("GetTitlesByOnPrice")]
+        public IActionResult GetTitlesByOnPrice(decimal price)
+        {
+            var titles = this.titlesRepository.GetTitlesByOnPrice(price);
+            return Ok(titles);
+        }
+
+        [HttpGet("GetTitleSalesByID")]
+        public IActionResult GetTitleSalesByID(string id)
+        {
+            var titles = this.titlesRepository.GetTitleSalesByID(id);
+            return Ok(titles);
         }
     }
 }

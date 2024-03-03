@@ -41,11 +41,12 @@ namespace publishers.Infrastructure.Repositories
         public override void Update(Titles titles)
         {
             try { 
-                var TitlesToUpdate = this.GetEntity(titles.title_id);
 
+                var TitlesToUpdate = this.GetEntity(titles.title_id);
                 if (TitlesToUpdate is null)
                     throw new TitlesException("Esta entidad no existe");
 
+                TitlesToUpdate.title_id = titles.title_id;
                 TitlesToUpdate.title = titles.title;
                 TitlesToUpdate.type = titles.type;
                 TitlesToUpdate.price = titles.price;
@@ -67,12 +68,9 @@ namespace publishers.Infrastructure.Repositories
         public override void Remove(Titles titles)
         {
             try {
-                if (titles.title_id == null)
+                if (titles.title_id is null)
                     throw new TitlesException("Este libro no existe");
-                var TitleToRemove = this.GetEntity(titles.title_id);
-
-                if (TitleToRemove is null)
-                    throw new TitlesException("Este libro no existe");
+                var TitleToRemove = this.GetEntity(titles.title_id);                
 
                 TitleToRemove.deleted = true;
                 TitleToRemove.userDelete = titles.userDelete;
@@ -234,13 +232,13 @@ namespace publishers.Infrastructure.Repositories
             return Title;
         }
 
-        public TitlesModel GetTitleSalesByID(int ytd_sales)
+        public TitlesModel GetTitleSalesByID(string id)
         {
             TitlesModel Title = new TitlesModel();
             try
             {
                 Title = (from tit in this.context.titles                         
-                         where tit.ytd_sales == ytd_sales
+                         where tit.title_id == id
                          select new TitlesModel
                          {
                              price = tit.ytd_sales
