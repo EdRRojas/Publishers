@@ -1,9 +1,9 @@
 ﻿
 namespace publishers.Infrastructure.Exceptions
 {
-    public class JobsException : Exception
+    public  class RoyschedExection : Exception
     {
-        public JobsException(string message) : base(message) 
+        public RoyschedExection(string message) : base(message) 
         {
             SaveLog(message);
         }
@@ -12,6 +12,5 @@ namespace publishers.Infrastructure.Exceptions
         {
 
         }
-
     }
 }

@@ -1,5 +1,6 @@
 ﻿using publishers.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using publishers.Infrastructure.Models;
 
 namespace publishers.Infrastructure.Contex
 {
@@ -11,5 +12,8 @@ namespace publishers.Infrastructure.Contex
         }
 
         public DbSet<Jobs> jobs {  get; set; } 
+
+        public DbSet<roysched> roysched { get; set; }
+        public DbSet<TitleModel> titles { get; set; }
     }
 }
