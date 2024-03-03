@@ -4,3 +4,19 @@ E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publ
 E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.AssemblyInfo.cs
 E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.csproj.CoreCompileInputs.cache
 E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.sourcelink.json
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Infrastructure\bin\Debug\net6.0\publishers.Infrastructure.deps.json
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Infrastructure\bin\Debug\net6.0\publishers.Infrastructure.dll
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Infrastructure\bin\Debug\net6.0\publishers.Infrastructure.pdb
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Infrastructure\bin\Debug\net6.0\publishers.Domain.dll
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Infrastructure\bin\Debug\net6.0\publishers.Domain.pdb
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.AssemblyInfo.cs
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.sourcelink.json
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishe.972FF36F.Up2Date
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.dll
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Infrastructure\obj\Debug\net6.0\refint\publishers.Infrastructure.dll
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.pdb
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Infrastructure\obj\Debug\net6.0\ref\publishers.Infrastructure.dll

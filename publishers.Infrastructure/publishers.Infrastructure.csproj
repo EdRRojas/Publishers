@@ -15,4 +15,9 @@
     <ProjectReference Include="..\publishers.Domain\publishers.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+    <Folder Include="Extentions\" />
+  </ItemGroup>
+
 </Project>

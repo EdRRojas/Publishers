@@ -10,3 +10,15 @@ E:\Visual Studio 2022\Publishers\publishers.Domain\obj\Debug\net6.0\publishers.D
 E:\Visual Studio 2022\Publishers\publishers.Domain\obj\Debug\net6.0\refint\publishers.Domain.dll
 E:\Visual Studio 2022\Publishers\publishers.Domain\obj\Debug\net6.0\publishers.Domain.pdb
 E:\Visual Studio 2022\Publishers\publishers.Domain\obj\Debug\net6.0\ref\publishers.Domain.dll
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Domain\bin\Debug\net6.0\publishers.Domain.deps.json
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Domain\bin\Debug\net6.0\publishers.Domain.dll
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Domain\bin\Debug\net6.0\publishers.Domain.pdb
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Domain\obj\Debug\net6.0\publishers.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Domain\obj\Debug\net6.0\publishers.Domain.AssemblyInfoInputs.cache
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Domain\obj\Debug\net6.0\publishers.Domain.AssemblyInfo.cs
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Domain\obj\Debug\net6.0\publishers.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Domain\obj\Debug\net6.0\publishers.Domain.sourcelink.json
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Domain\obj\Debug\net6.0\publishers.Domain.dll
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Domain\obj\Debug\net6.0\refint\publishers.Domain.dll
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Domain\obj\Debug\net6.0\publishers.Domain.pdb
+C:\Users\Gabriel Rodriguez\Desktop\Publishers\publishers.Domain\obj\Debug\net6.0\ref\publishers.Domain.dll

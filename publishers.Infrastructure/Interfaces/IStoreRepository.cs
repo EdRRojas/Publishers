@@ -5,7 +5,7 @@ using publishers.Infrastructure.Models;
 
 namespace publishers.Infrastructure.Interfaces
 {
-    internal interface IStoreRepository: IBaseRepository<Store, string>
+    public interface IStoreRepository: IBaseRepository<Store, string>
     {
         List<Store> GetStoresByState(string state);
         Store GetStoreById(string stor_id);

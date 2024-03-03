@@ -1,12 +1,16 @@
 ﻿using Microsoft.Extensions.Logging;
 using publishers.Domain.Entities;
-using publishers.Domain.Exceptions;
 using publishers.Domain.Repository;
 using publishers.Infrastructure.Context;
 using publishers.Infrastructure.Core;
 using publishers.Infrastructure.Interfaces;
 using publishers.Infrastructure.Models;
-using static System.Formats.Asn1.AsnWriter;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace publishers.Infrastructure.Repositories
 {
@@ -26,6 +30,9 @@ namespace publishers.Infrastructure.Repositories
         {
             try
             {
+                Validate(store);
+                this.context.Entry(store).State = EntityState.Added;
+
                 this.context.stores.Add(store);
                 this.context.SaveChanges();
             }
@@ -38,7 +45,7 @@ namespace publishers.Infrastructure.Repositories
 
         public override List<Store> GetEntities()
         {
-            return base.GetEntities().Where(stores => !stores.deleted).ToList();
+            return base.GetEntities().Where(stores => stores?.deleted == null).ToList();
         }
 
         public List<Store> GetStoresByState(string state)
@@ -48,22 +55,32 @@ namespace publishers.Infrastructure.Repositories
 
         public Store GetStoreById(string stor_id)
         {
-            return (Store)base.GetEntities().Where(store => store.stor_id == stor_id);
+            return base.GetEntities().FirstOrDefault(store => store.stor_id == stor_id);
         }
 
         public override void Update(Store store)
         {
             try
             {
-                var store_to_update = this.GetEntity(store.stor_id);
+                Validate(store);
+                var store_to_update = this.GetStoreById(store.stor_id);
 
-                store_to_update.stor_name = store.stor_name;
-                store_to_update.stor_address = store.stor_address;
-                store_to_update.city = store.city;
-                store_to_update.state = store.state;
-                store_to_update.zip = store.zip;
+                if (store_to_update != null)
+                {
+                    store_to_update.stor_name = store.stor_name;
+                    store_to_update.stor_address = store.stor_address;
+                    store_to_update.city = store.city;
+                    store_to_update.state = store.state;
+                    store_to_update.zip = store.zip;
 
-                this.context.stores.Update(store_to_update);
+                    this.context.stores.Update(store_to_update);
+                    this.context.SaveChanges();
+                }
+                else
+                {
+                    this.logger.LogError("Store with ID {0} not found.", store.stor_id);
+                }
+
             } catch(Exception ex)
             {
                 this.logger.LogError(message, ex.ToString());
@@ -75,10 +92,11 @@ namespace publishers.Infrastructure.Repositories
         {
             try
             {
+                Validate(store);
                 var store_to_delete = this.GetEntity(store.stor_id);
 
                 store_to_delete.deleted = true;
-                store_to_delete.userDeleted = store.userDeleted;
+                store_to_delete.userDelete = store.userDelete;
                 store_to_delete.deleteTime = store.deleteTime;
 
                 this.context.stores.Update(store_to_delete);
@@ -88,6 +106,18 @@ namespace publishers.Infrastructure.Repositories
             catch (Exception ex)
             {
                 this.logger.LogError(message, ex.ToString());
+            }
+        }
+
+        private void Validate(Store store)
+        {
+            var validationContext = new ValidationContext(store, serviceProvider: null, items: null);
+            var validationResults = new List<ValidationResult>();
+
+            if (!Validator.TryValidateObject(store, validationContext, validationResults, validateAllProperties: true))
+            {
+                var validationErrors = string.Join(Environment.NewLine, validationResults.Select(r => r.ErrorMessage));
+                throw new ValidationException(validationErrors);
             }
         }
     }

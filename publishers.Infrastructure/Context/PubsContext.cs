@@ -7,10 +7,13 @@ namespace publishers.Infrastructure.Context
 {
     public class PubsContext : DbContext
     {
-        public PubsContext(DbContextOptions<PubsContext> options) : base(options) { }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Store>()
+                .HasKey(s => s.stor_id); 
+        }
 
-        public DbSet<Titles> titles { get; set; }
-        public DbSet<PublishersModel> publishers { get; set; }
+        public PubsContext(DbContextOptions<PubsContext> options) : base(options) { }
         public DbSet<Store> stores { get; set; }
     }
 }

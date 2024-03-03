@@ -11,8 +11,8 @@
         public DateTime creationDate { get; set; }
         public int? userMod { get; set; }
         public DateTime? modifyDate { get; set; }
-        public int? userDeleted { get; set; }
+        public int? userDelete { get; set; }
         public DateTime? deleteTime { get; set; }
-        public bool deleted { get; set; }
+        public bool? deleted { get; set; }
     }
 }
