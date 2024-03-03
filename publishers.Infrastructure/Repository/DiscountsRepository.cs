@@ -4,10 +4,15 @@ using publishers.Infrastructure.Interface;
 
 namespace publishers.Infrastructure.Repository
 {
-    public class DiscountsRepository : IDicountsRepository 
+    public class DiscountsRepository : IDicountsRepository
     {
         private readonly PubsContext context;
 
+
+        public Discounts GetDiscountsByID(string discounttype)
+        {
+            return this.context.discounts.Find(discounttype);
+        }
         public void create(Discounts discounts)
         {
             try
@@ -20,21 +25,15 @@ namespace publishers.Infrastructure.Repository
                 throw ex;
             }
         }
-
-        public Discounts GetDiscountsByID(int stor_id)
-        {
-            return this.context.discounts.Find(stor_id);
-        }
-
         public void remove(Discounts discounts)
         {
             try
             {
-                var DiscountsToDelete = this.GetDiscountsByID(discounts.stor_id);
+                var DiscountsToDelete = this.GetDiscountsByID(discounts.discounttype);
 
                 DiscountsToDelete.deleted = true;
                 DiscountsToDelete.userDeleted = discounts.userDeleted;
-                DiscountsToDelete.deletedDate = discounts.deletedDate;
+                DiscountsToDelete.deletedTime = DateTime.Now;
 
 
                 this.context.discounts.Update(DiscountsToDelete);
@@ -51,9 +50,9 @@ namespace publishers.Infrastructure.Repository
         {
             try
             {
-                var DiscountsToUpdate = this.GetDiscountsByID(discounts.stor_id);
+                var DiscountsToUpdate = this.GetDiscountsByID(discounts.discounttype);
 
-                DiscountsToUpdate.discounttype = discounts.discounttype;
+             
                 DiscountsToUpdate.stor_id = discounts.stor_id;
                 DiscountsToUpdate.lowqty = discounts.lowqty;
                 DiscountsToUpdate.highqty = discounts.highqty;
@@ -70,6 +69,8 @@ namespace publishers.Infrastructure.Repository
                 throw ex;
             }
         }
+
+        
     }
 }
 

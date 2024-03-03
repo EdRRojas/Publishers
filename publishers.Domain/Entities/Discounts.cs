@@ -8,7 +8,7 @@ namespace publishers.Domain.Entities
         public string? stor_id { get; set; }
         public int lowqty { get; set; }
         public int highqty { get; set; }
-        public decimal discount {  get; set; }
+        public decimal? discount {  get; set; }
 
     }
 }
