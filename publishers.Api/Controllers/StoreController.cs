@@ -41,8 +41,15 @@ namespace publishers.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] Store store)
         {
-            _storeRepository.Create(store);
-            return CreatedAtAction(nameof(Get), new { id = store.stor_id }, store);
+            try
+            {
+                _storeRepository.Create(store);
+                return CreatedAtAction(nameof(Get), new { id = store.stor_id }, store);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.ToString());
+            }
         }
 
         // PUT: api/Store/5
@@ -66,7 +73,7 @@ namespace publishers.Controllers
                 }
 
                 _storeRepository.Remove(store);
-                return NoContent();
+                return Ok("La tienda ha sido eliminada correctamente.");
             }
             catch (Exception ex)
             {

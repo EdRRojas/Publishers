@@ -26,20 +26,15 @@ namespace publishers.Infrastructure.Repositories
             this.logger = logger;
         }
 
-        public override void Create(Store store)
+        public override  void  Create(Store store)
         {
-            try
-            {
-                Validate(store);
-                this.context.Entry(store).State = EntityState.Added;
+            Validate(store);
 
-                this.context.stores.Add(store);
-                this.context.SaveChanges();
-            }
-            catch (Exception ex)
-            {
-                this.logger.LogError(message, ex.ToString());
-            }
+            if (context.stores.Any(st => st.stor_id == store.stor_id))
+                throw new Exception("Este id ya esta registrado.");
+
+            this.context.stores.Add(store);
+            this.context.SaveChanges();
         }
 
 
@@ -55,7 +50,7 @@ namespace publishers.Infrastructure.Repositories
 
         public Store GetStoreById(string stor_id)
         {
-            return base.GetEntities().FirstOrDefault(store => store.stor_id == stor_id);
+            return base.GetEntities().FirstOrDefault(store => (store.stor_id == stor_id && store.deleted == null));
         }
 
         public override void Update(Store store)
