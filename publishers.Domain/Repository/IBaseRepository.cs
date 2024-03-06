@@ -10,8 +10,10 @@ namespace publishers.Domain.Repository
         List<TEntity> GetEntities();
         List<TEntity> FinnAll(Func<TEntity, bool> filter);
         bool Exists(Func<TEntity, bool> filter);
-        bool create(TEntity entity);
-        bool update(TEntity entity);
+        void create(TEntity entity);
+        void update(TEntity entity);
+        void remove (TEntity entity);
+
     }
 
 }

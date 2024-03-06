@@ -1,13 +1,14 @@
 ﻿using publishers.Domain.Entities;
+using publishers.Domain.Repository;
+using publishers.Infrastructure.Models;
 
 namespace publishers.Infrastructure.Interface
 {
-    public interface IDicountsRepository 
+    public interface IDicountsRepository : IBaseRepository<Discounts, string>
     {
-        void create(Discounts discounts);
-        Discounts GetDiscountsByID(string discounttype);
-        void update(Discounts discounts);
-        void remove(Discounts discounts);
-
+        DiscountsModel GetdiscounttypeByName (string name);
+        List <DiscountsModel> Getstor_idByID (int id);
+        List<DiscountsModel> GetdiscountByDiscounts(decimal discount); 
+        
     }
 }

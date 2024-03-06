@@ -12,7 +12,7 @@
         public int? userMod {  get; set; }
         public DateTime? modifyDate { get; set; }
         public int? userDeleted { get; set; }
-        public DateTime? deletedTime { get; set; }
+        public DateTime? deteleTime { get; set; }
         public bool deleted {  get; set; }
     }
 }

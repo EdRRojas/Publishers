@@ -1,11 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using publishers.Domain.Repository;
 using publishers.Infrastructure.Context;
+using System.ComponentModel;
 using System.Security.Cryptography;
 
 namespace publishers.Infrastructure.Core
 {
-    public class BaseRepository<TEntity, TId> : IBaseRepository<TEntity, TId> where TEntity : class
+    public abstract class BaseRepository<TEntity, TId> : IBaseRepository<TEntity, TId> where TEntity : class
         where TId : IEquatable<TId>
     {
         public readonly PubsContext context;
@@ -16,34 +17,43 @@ namespace publishers.Infrastructure.Core
             this.context = context;
             this.DbEntity = context.Set<TEntity>();
         }
-        public bool create(TEntity entity)
+        public virtual void create(TEntity entity)
         {
-            throw new NotImplementedException();
+            DbEntity.Add(entity);
+            context.SaveChanges();
         }
 
-        public bool Exists(Func<TEntity, bool> filter)
+        public virtual bool Exists(Func<TEntity, bool> filter)
         {
-            throw new NotImplementedException();
+            return DbEntity.Any(filter);
         }
 
-        public List<TEntity> FinnAll(Func<TEntity, bool> filter)
+        public virtual List<TEntity> FinnAll(Func<TEntity, bool> filter)
         {
-            throw new NotImplementedException();
+            return DbEntity.Where(filter).ToList();
         }
 
-        public List<TEntity> GetEntities()
+        public virtual List<TEntity> GetEntities()
         {
-            throw new NotImplementedException();
+            return DbEntity.ToList();
         }
 
-        public TEntity GetEntity(TId id)
+        public virtual TEntity GetEntity(TId id)
         {
-            throw new NotImplementedException();
+            return DbEntity.Find(id);
         }
 
-        public bool update(TEntity entity)
+        public virtual void remove(TEntity entity)
         {
-            throw new NotImplementedException();
+            DbEntity.Update(entity);
+            context.SaveChanges();
         }
+
+        public virtual void update(TEntity entity)
+        {
+            DbEntity.Update(entity);
+            context.SaveChanges();
+        }
+
     }
 }
