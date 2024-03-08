@@ -1,0 +1,16 @@
+D:\Landy\proyecto\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.csproj.AssemblyReference.cache
+D:\Landy\proyecto\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Landy\proyecto\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.AssemblyInfoInputs.cache
+D:\Landy\proyecto\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.AssemblyInfo.cs
+D:\Landy\proyecto\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Landy\proyecto\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.sourcelink.json
+D:\Landy\proyecto\publishers.Infrastructure\bin\Debug\net6.0\publishers.Infrastructure.deps.json
+D:\Landy\proyecto\publishers.Infrastructure\bin\Debug\net6.0\publishers.Infrastructure.dll
+D:\Landy\proyecto\publishers.Infrastructure\bin\Debug\net6.0\publishers.Infrastructure.pdb
+D:\Landy\proyecto\publishers.Infrastructure\bin\Debug\net6.0\publishers.Domain.dll
+D:\Landy\proyecto\publishers.Infrastructure\bin\Debug\net6.0\publishers.Domain.pdb
+D:\Landy\proyecto\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.csproj.CopyComplete
+D:\Landy\proyecto\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.dll
+D:\Landy\proyecto\publishers.Infrastructure\obj\Debug\net6.0\refint\publishers.Infrastructure.dll
+D:\Landy\proyecto\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.pdb
+D:\Landy\proyecto\publishers.Infrastructure\obj\Debug\net6.0\ref\publishers.Infrastructure.dll

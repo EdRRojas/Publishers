@@ -1,0 +1,12 @@
+D:\Landy\proyecto\publishers.Application\bin\Debug\net6.0\publishers.Application.deps.json
+D:\Landy\proyecto\publishers.Application\bin\Debug\net6.0\publishers.Application.dll
+D:\Landy\proyecto\publishers.Application\bin\Debug\net6.0\publishers.Application.pdb
+D:\Landy\proyecto\publishers.Application\obj\Debug\net6.0\publishers.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Landy\proyecto\publishers.Application\obj\Debug\net6.0\publishers.Application.AssemblyInfoInputs.cache
+D:\Landy\proyecto\publishers.Application\obj\Debug\net6.0\publishers.Application.AssemblyInfo.cs
+D:\Landy\proyecto\publishers.Application\obj\Debug\net6.0\publishers.Application.csproj.CoreCompileInputs.cache
+D:\Landy\proyecto\publishers.Application\obj\Debug\net6.0\publishers.Application.sourcelink.json
+D:\Landy\proyecto\publishers.Application\obj\Debug\net6.0\publishers.Application.dll
+D:\Landy\proyecto\publishers.Application\obj\Debug\net6.0\refint\publishers.Application.dll
+D:\Landy\proyecto\publishers.Application\obj\Debug\net6.0\publishers.Application.pdb
+D:\Landy\proyecto\publishers.Application\obj\Debug\net6.0\ref\publishers.Application.dll

@@ -1,8 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using publishers.Domain.Repository;
 using publishers.Infrastructure.Context;
-using System.ComponentModel;
-using System.Security.Cryptography;
 
 namespace publishers.Infrastructure.Core
 {
@@ -15,7 +13,7 @@ namespace publishers.Infrastructure.Core
         protected BaseRepository(PubsContext context)
         {
             this.context = context;
-            this.DbEntity = context.Set<TEntity>();
+            this.DbEntity= context.Set<TEntity>();
         }
         public virtual void create(TEntity entity)
         {

@@ -6,7 +6,7 @@ namespace publishers.Domain.Repository
         where TId : IEquatable<TId>
       
     {
-           TEntity GetEntity(TId id);
+        TEntity GetEntity(TId id);
         List<TEntity> GetEntities();
         List<TEntity> FinnAll(Func<TEntity, bool> filter);
         bool Exists(Func<TEntity, bool> filter);

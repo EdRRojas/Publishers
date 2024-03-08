@@ -4,14 +4,14 @@ using publishers.Infrastructure.Interface;
 using publishers.Infrastructure.Core;
 using Microsoft.Extensions.Logging;
 using publishers.Infrastructure.Models;
-using publishers.Domain.Repository;
 
 namespace publishers.Infrastructure.Repository
 {
-    public class DiscountsRepository : BaseRepository<Discounts, string>, IDicountsRepository
+    public class DiscountsRepository : BaseRepository<Discounts, string>, IDiscountsRepository
     {
         private readonly PubsContext context;
         private readonly ILogger<DiscountsRepository> logger;
+        private string? discounttype;
 
         public DiscountsRepository(PubsContext context, ILogger<DiscountsRepository> logger): base(context) 
         {
@@ -84,23 +84,22 @@ namespace publishers.Infrastructure.Repository
 
         public DiscountsModel GetdiscounttypeByName(string name)
         {
-            List<DiscountsModel> discounts = new List<DiscountsModel>();
+            DiscountsModel discounts = new DiscountsModel();
             try
-            { 
-                discounts = (from di in this.context.discounts
+            {
+                discounts   = (from di in this.context.discounts
                              join stor in this.context.stores on di.stor_id equals stor.stor_id
                              where di.discounttype == "Customer Discount"
                              select new DiscountsModel()
                              {
                                  discounttype = di.discounttype,
                                  stor_id = stor.stor_id,
-                                 
-                             }).ToList();
-
+                             }).FirstOrDefault();
+                
             }
             catch (Exception ex)
             {
-                this.logger.LogError("No se encontraron ningun descuento con este nombre.", ex.ToString);
+                this.logger.LogError("No se encontraron ningún descuento con este nombre.", ex.ToString);
             }
             return discounts;
         }
@@ -110,8 +109,6 @@ namespace publishers.Infrastructure.Repository
             List<DiscountsModel> discounts = new List<DiscountsModel>();
             try
             {
-                    throw (new Exception("Este descuento no existe"));
-
               discounts = (from di in this.context.discounts
                           join stor in this.context.stores on di.stor_id equals stor.stor_id
                           where di.stor_id == "8042"
@@ -158,7 +155,7 @@ namespace publishers.Infrastructure.Repository
 
         }
 
-        
+       
     }
 }
 

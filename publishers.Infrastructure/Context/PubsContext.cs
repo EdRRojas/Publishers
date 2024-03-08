@@ -6,10 +6,12 @@ namespace publishers.Infrastructure.Context
 {
     public class PubsContext: DbContext
     {
-        public PubsContext (DbContextOptions<PubsContext> options) : base(options) { }
+        public PubsContext(DbContextOptions<PubsContext> options) : base(options) { }
 
         public DbSet<Discounts> discounts { get; set; }
         public DbSet<StoresModel> stores { get; set; }
 
+
     }
+
 }

@@ -1,4 +1,7 @@
-﻿namespace publishers.Domain.Core
+﻿
+using System.ComponentModel.DataAnnotations;
+
+namespace publishers.Domain.Core
 {
     public abstract class BaseEntity
     {
