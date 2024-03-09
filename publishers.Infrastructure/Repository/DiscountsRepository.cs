@@ -20,7 +20,7 @@ namespace publishers.Infrastructure.Repository
         }
          public override List<Discounts> GetEntities()
          {
-            return base.GetEntities().Where(di => di.deleted).ToList();
+            return base.GetEntities();
          }
          
         public override void create(Discounts discounts)
@@ -50,8 +50,7 @@ namespace publishers.Infrastructure.Repository
                 DiscountsToUpdate.highqty = discounts.highqty;
                 DiscountsToUpdate.discount = discounts.discount;
                 DiscountsToUpdate.modifyDate = discounts.modifyDate;
-                DiscountsToUpdate.creationDate = discounts.creationDate;
-                DiscountsToUpdate.creationUser = discounts.creationUser;
+                DiscountsToUpdate.userMod = discounts.userMod;
 
                 this.context.discounts.Update(DiscountsToUpdate);
                 this.context.SaveChanges();
@@ -68,7 +67,7 @@ namespace publishers.Infrastructure.Repository
             {
                 var DiscountsToRemove = this.GetEntity(discounts.discounttype);
 
-                DiscountsToRemove.deleted = true;
+                DiscountsToRemove.deteled = 0;
                 DiscountsToRemove.userDeleted = discounts.userDeleted;
                 DiscountsToRemove.deteleTime = discounts.deteleTime;
 

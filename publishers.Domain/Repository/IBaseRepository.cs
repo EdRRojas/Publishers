@@ -7,7 +7,7 @@ namespace publishers.Domain.Repository
       
     {
         TEntity GetEntity(TId id);
-        List<TEntity> GetEntities();
+        List<TEntity> GetEntities(string? name);
         List<TEntity> FinnAll(Func<TEntity, bool> filter);
         bool Exists(Func<TEntity, bool> filter);
         void create(TEntity entity);

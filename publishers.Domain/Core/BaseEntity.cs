@@ -1,5 +1,6 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace publishers.Domain.Core
 {
@@ -7,15 +8,28 @@ namespace publishers.Domain.Core
     {
         public BaseEntity()
         {
-            this.creationDate= DateTime.Now;
-            this.deleted = false;
+            this.creationDate = DateTime.Now;
+            this.deteled = 1;
         }
-        public int creationUser {  get; set; }
+        [Column("creationUser")]
+        public int creationUser { get; set; }
+
+        [Column("creationDate")]
         public DateTime creationDate { get; set; }
-        public int? userMod {  get; set; }
+
+        [Column("userMod")]
+        public int? userMod { get; set; }
+
+        [Column("modifyDate")]
         public DateTime? modifyDate { get; set; }
+
+        [Column("userDeleted")]
         public int? userDeleted { get; set; }
+
+        [Column("deteleTime")]
         public DateTime? deteleTime { get; set; }
-        public bool deleted {  get; set; }
+
+        [Column("detele")]
+        public int deteled {  get; set; }
     }
 }

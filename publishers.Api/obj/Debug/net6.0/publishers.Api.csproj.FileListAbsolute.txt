@@ -68,3 +68,4 @@ D:\Landy\proyecto\publishers.Api\bin\Debug\net6.0\publishers.Domain.dll
 D:\Landy\proyecto\publishers.Api\bin\Debug\net6.0\publishers.Infrastructure.dll
 D:\Landy\proyecto\publishers.Api\bin\Debug\net6.0\publishers.Infrastructure.pdb
 D:\Landy\proyecto\publishers.Api\bin\Debug\net6.0\publishers.Domain.pdb
+D:\Landy\proyecto\publishers.Api\obj\Debug\net6.0\publishers.Api.MvcApplicationPartsAssemblyInfo.cs

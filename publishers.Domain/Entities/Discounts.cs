@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace publishers.Domain.Entities
 {
+    [Table("Discounts", Schema = "dbo")]
     public class Discounts : BaseEntity
     {
         [Key]

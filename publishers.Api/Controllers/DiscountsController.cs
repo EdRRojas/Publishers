@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using publishers.Api.Models;
+using publishers.Api.Dtos.Discounts;
 using publishers.Infrastructure.Interface;
+
+
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -16,62 +18,67 @@ namespace publishers.Api.Controllers
             this.discountsRepository = discountsRepository;
         }
 
-        [HttpGet("GetDiscounts")]
-        public IActionResult Get()
+        [HttpGet("GetdiscounttypeByName")]
+        public IActionResult Get(string name)
         {
-            var discounts = this.discountsRepository.GetEntities();
+            var discounts = this.discountsRepository.GetEntities(name);
             return Ok(discounts);
         }
 
         // GET api/<DiscountsController>/5
         [HttpGet("GetDiscountByID")]
-        public IActionResult GetDiscountByID (int id)
+        public IActionResult GetDiscountByID (string id)
         {
-            var discount = this.discountsRepository.GetEntities();
+            var discount = this.discountsRepository.GetEntities(id);
             return Ok(discount);
         }
 
         // POST api/<DiscountsController>
         [HttpPost("SaveDiscounts")]
-        public void Post([FromBody]DiscountsAddModel discountsAddModel)
+        public void Post([FromBody]DiscountsAddDtos discountsAddDtos)
         {
 
             this.discountsRepository.create(new Domain.Entities.Discounts()
             {
 
-                discounttype = discountsAddModel.discounttype,
-                stor_id = discountsAddModel.stor_id,
-                lowqty = discountsAddModel.lowqty,
-                highqty = discountsAddModel.highqty,
-                discount = discountsAddModel.discount,
-                creationUser = discountsAddModel.creationUser,
-                creationDate = discountsAddModel.creationDate,
+                discounttype = discountsAddDtos.discounttype,
+                stor_id = discountsAddDtos.stor_id,
+                lowqty = discountsAddDtos.lowqty,
+                highqty = discountsAddDtos.highqty,
+                discount = discountsAddDtos.discount,
+                
+                
             }); 
         }
         // PUT api/<DiscountsController>/5
         [HttpPut("DiscountsUpdate")]
-        public void Put([FromBody] DiscountsAddModel discountsAddModel )
+        public void Put([FromBody] DiscountsUpdateDtos discountsUpdateDtos )
         {
             this.discountsRepository.update(new Domain.Entities.Discounts()
             {
-                discounttype = discountsAddModel.discounttype,
-                discount = discountsAddModel.discount,
-                lowqty = discountsAddModel.lowqty,
-                highqty = discountsAddModel.highqty,
+                discounttype = discountsUpdateDtos.discounttype,
+                discount = discountsUpdateDtos.discount,
+                lowqty = discountsUpdateDtos.lowqty,
+                highqty = discountsUpdateDtos.highqty,
+                
             });
         }
 
         // DELETE api/<DiscountsController>/5
-        [HttpDelete("{id}")]
-        public void Delete([FromBody] DiscountsAddModel discountsAddModel)
+        [HttpDelete("DiscountsRemove")]
+        public void Delete([FromBody] DiscountsDtosDelete discountsDtosDelete)
         {
             this.discountsRepository.remove(new Domain.Entities.Discounts()
             {
-                discounttype = discountsAddModel.discounttype,
-                deleted = true,
-                userDeleted = discountsAddModel.creationUser,
-                deteleTime = discountsAddModel.creationDate
+                discounttype = discountsDtosDelete.discounttype,
+                deteled = 0,
+                userDeleted = discountsDtosDelete.creationUser,
+                deteleTime = discountsDtosDelete.creationDate
             }) ;
         }
+        
     }
+
+
+
 }

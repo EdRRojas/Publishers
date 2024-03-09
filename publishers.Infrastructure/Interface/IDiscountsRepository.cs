@@ -9,6 +9,6 @@ namespace publishers.Infrastructure.Interface
         DiscountsModel GetdiscounttypeByName (string name);
         List <DiscountsModel> Getstor_idByID (int id);
         List<DiscountsModel> GetdiscountByDiscounts(decimal discount);
-        void create(Discounts discounts);
+        
     }
 }

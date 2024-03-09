@@ -36,6 +36,11 @@ namespace publishers.Infrastructure.Core
             return DbEntity.ToList();
         }
 
+        public List<TEntity> GetEntities(string name)
+        {
+            return DbEntity.ToList();
+        }
+
         public virtual TEntity GetEntity(TId id)
         {
             return DbEntity.Find(id);
