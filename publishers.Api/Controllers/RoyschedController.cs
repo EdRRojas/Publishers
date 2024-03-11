@@ -17,7 +17,7 @@ namespace publishers.Api.Controllers
             this.royschedRepository = royschedRepository;
         }
 
-        [HttpGet ("GetRoysched")]
+        [HttpGet ("GetRoyscheds")]
         public IActionResult Get()
         {
             var royscheds = this.royschedRepository.GetEntities().Select(ro => new RoyschedGetModel()
