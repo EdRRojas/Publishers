@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\piblishers.IntegrationTest\publishers.IntegrationTest.csproj" />
     <ProjectReference Include="..\publishers.Domain\publishers.Domain.csproj" />
   </ItemGroup>
 

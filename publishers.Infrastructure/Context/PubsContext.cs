@@ -10,6 +10,7 @@ namespace publishers.Infrastructure.Context
         public PubsContext(DbContextOptions<PubsContext> options) : base(options) { }
 
         public DbSet<Titles> titles { get; set; }
-        public DbSet<PublishersModel> publishers { get; set;} 
+        public DbSet<PublishersModel> publishers { get; set;}
+
     }
 }

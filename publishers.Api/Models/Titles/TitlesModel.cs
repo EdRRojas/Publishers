@@ -1,4 +1,4 @@
-﻿namespace publishers.Api.Models
+﻿namespace publishers.Api.Models.Titles
 {
     public class TitlesModel
     {

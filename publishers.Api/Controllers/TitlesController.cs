@@ -64,12 +64,13 @@ namespace publishers.Api.Controllers
                 title_id = titlesUpdateDto.title_id,
                 title = titlesUpdateDto.title,
                 type = titlesUpdateDto.type,
-                pub_id = titlesUpdateDto.pub_id,
                 price = titlesUpdateDto.price,
                 advance = titlesUpdateDto.advance,
                 royalty = titlesUpdateDto.royalty,
                 ytd_sales = titlesUpdateDto.ytd_sales,
-                notes = titlesUpdateDto.notes
+                notes = titlesUpdateDto.notes,
+                userMod = titlesUpdateDto.UserId,
+                modifyDate = titlesUpdateDto.modifyDate
             });
 
         }
@@ -87,7 +88,7 @@ namespace publishers.Api.Controllers
             });
         }
 
-        [HttpGet("GetTitlesByName")]
+        [HttpGet("GetTitleByName")]
         public IActionResult GetTitlesByName(string name)
         {
             var titles = this.titlesRepository.GetTitleByName(name);
@@ -102,9 +103,9 @@ namespace publishers.Api.Controllers
         }
 
         [HttpGet("GetTitlesByPub")]
-        public IActionResult GetTitlesByPub(string pub)
+        public IActionResult GetTitlesByPub(string pub_Id)
         {
-            var titles = this.titlesRepository.GetTitlesByPub(pub);
+            var titles = this.titlesRepository.GetTitlesByPub(pub_Id);
             return Ok(titles);
         }
 

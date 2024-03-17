@@ -248,8 +248,10 @@ namespace publishers.Infrastructure.Repositories
             catch (Exception ex)
             {
                 this.logger.LogError("Error bucando los precios de los libros", ex.ToString);
+               
             }
             return Title;
         }
+        
     }
 }

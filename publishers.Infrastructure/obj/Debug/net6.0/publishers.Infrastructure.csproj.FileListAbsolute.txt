@@ -14,3 +14,12 @@ E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publ
 E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\refint\publishers.Infrastructure.dll
 E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\publishers.Infrastructure.pdb
 E:\Visual Studio 2022\Publishers\publishers.Infrastructure\obj\Debug\net6.0\ref\publishers.Infrastructure.dll
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\bin\Debug\net6.0\publishers.IntegrationTest.deps.json
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\bin\Debug\net6.0\publishers.IntegrationTest.runtimeconfig.json
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\bin\Debug\net6.0\testhost.exe
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\bin\Debug\net6.0\testhost.dll
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\bin\Debug\net6.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\bin\Debug\net6.0\xunit.runner.reporters.netcoreapp10.dll
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\bin\Debug\net6.0\xunit.runner.utility.netcoreapp10.dll
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\bin\Debug\net6.0\publishers.IntegrationTest.dll
+E:\Visual Studio 2022\Publishers\publishers.Infrastructure\bin\Debug\net6.0\publishers.IntegrationTest.pdb

@@ -11,6 +11,6 @@ namespace publishers.Domain.Exceptions
         public void SaveLog(string message)
         {
 
-        }
+        }        
     }
 }
