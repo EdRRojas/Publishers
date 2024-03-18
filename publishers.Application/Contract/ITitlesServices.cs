@@ -11,9 +11,9 @@ namespace publishers.Application.Contract
         ServicesResult<List<TitlesModel>> GetTitles();
         ServicesResult<TitlesModel> GetTitle(string title);
         ServicesResult<TitlesModel> CreateTitle(TitlesDtoAdd titlesDtoAdd);
-        ServicesResult<TitlesModel> UpdateTitle(TitlesDtoUpdate titlesDtoUpdate);
-        ServicesResult<TitlesModel> DeleteTitle(TitlesDtoDelete titlesDtoDelete);
-        ServicesResult<TitlesModel> GetTitlesByName(string name);
+        ServicesResult<TitlesModel> TitlesUpdate(TitlesDtoUpdate titlesDtoUpdate);
+        ServicesResult<TitlesModel> TitleRemove(TitlesDtoDelete titlesDtoDelete);
+        ServicesResult<TitlesModel> GetTitleByName(string name);
         ServicesResult<List<TitlesModel>> GetTitlesByType(string type);
         ServicesResult<List<TitlesModel>> GetTitlesByPub(string pubId);
         ServicesResult<List<TitlesModel>> GetTitlesByUnderPrice(decimal price);

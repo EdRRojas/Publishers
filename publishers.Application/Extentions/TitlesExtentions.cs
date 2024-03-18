@@ -7,7 +7,7 @@ namespace publishers.Application.Extentions
 {
     public static class TitlesExtentions
     {
-        public static TitlesModel ConvertDtoToGetEntity(this Titles titles)
+        public static TitlesModel ConvertEntityToModel(this Titles titles)
         {
             return new TitlesModel()
             {
@@ -21,14 +21,13 @@ namespace publishers.Application.Extentions
                 ytd_sales = titles.ytd_sales
             };
         }
-        public static DtoBase ConvertDtoToGetEntity(this TitlesDtoBase titlesDtoBase)
+        public static Titles ConvertDtoToGetEntity(this TitlesDtoBase titlesDtoBase)
         {
-            return new TitlesDtoBase()
+            return new Titles()
             {
                 title_id = titlesDtoBase.title_id,
                 title = titlesDtoBase.title,
-                type = titlesDtoBase.type,
-                pub_id = titlesDtoBase.pub_id,
+                type = titlesDtoBase.type,                
                 price = titlesDtoBase.price,
                 advance = titlesDtoBase.advance,
                 royalty = titlesDtoBase.royalty,
@@ -37,7 +36,8 @@ namespace publishers.Application.Extentions
         }
         public static Titles ConvertDtoCreateToEntity(this TitlesDtoAdd titlesDtoAdd)
         {
-            Titles titles = ConvertDtoToGetEntity(titlesDtoAdd);            
+            Titles titles = ConvertDtoToGetEntity(titlesDtoAdd);
+            titles.pub_id = titlesDtoAdd.pub_id;
             titles.creationUser = titlesDtoAdd.UserId;
             titles.creationDate = titlesDtoAdd.modifyDate;
             return titles;

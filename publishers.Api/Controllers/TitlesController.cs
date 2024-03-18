@@ -128,6 +128,6 @@ namespace publishers.Api.Controllers
         {
             var titles = this.titlesRepository.GetTitleSalesByID(id);
             return Ok(titles);
-        }
+        }        
     }
 }
