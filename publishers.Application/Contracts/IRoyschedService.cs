@@ -7,7 +7,7 @@ namespace publishers.Application.Contracts
     public interface IRoyschedService
     {
         ServiceResult <List<RoyschedGetModel>> GetRoyscheds();
-        ServiceResult<RoyschedGetModel> GetRoyschedById(int id);
+        ServiceResult<RoyschedGetModel> GetRoyschedById(string id);
         ServiceResult<string> AddRoysched(RoyschedAddDto royschedAddDto);
         ServiceResult<bool> UpdateRoyshed(RoyschedUpdateDto royschedUpdateDto); 
         ServiceResult<bool> DeleteRoysched(RoyschedReomveDto royschedReomveDto);

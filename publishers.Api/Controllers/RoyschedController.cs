@@ -26,8 +26,6 @@ namespace publishers.Api.Controllers
                 lorange = ro.lorange,
                 hirange = ro.hirange,
                 royalty = ro.royalty,
-                CreationDate = ro.CreationDate,
-                CreationUser = ro.CreationUser,
             });
 
             return Ok (royscheds);
@@ -43,8 +41,6 @@ namespace publishers.Api.Controllers
                 lorange = roysched.lorange,
                 hirange = roysched.hirange,
                 royalty = roysched.royalty,
-                CreationDate = roysched.CreationDate,
-                CreationUser = roysched.CreationUser,
             };
             return Ok (royschedGetModel);
         }

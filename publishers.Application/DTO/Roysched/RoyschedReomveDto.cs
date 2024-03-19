@@ -2,6 +2,8 @@
 {
     public record RoyschedReomveDto : RoyschedDtoBase
     {
-
+        public DateTime deleteTime;
+        public int deleted;
+        public int userDelete;
     }
 }
