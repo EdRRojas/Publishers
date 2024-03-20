@@ -69,3 +69,6 @@ C:\Users\elyos\OneDrive\Escritorio\Mierdas en cantidad\New folder\Publishers\pub
 C:\Users\elyos\OneDrive\Escritorio\Mierdas en cantidad\New folder\Publishers\publishers.Api\bin\Debug\net6.0\publishers.Infrastructure.dll
 C:\Users\elyos\OneDrive\Escritorio\Mierdas en cantidad\New folder\Publishers\publishers.Api\bin\Debug\net6.0\publishers.Infrastructure.pdb
 C:\Users\elyos\OneDrive\Escritorio\Mierdas en cantidad\New folder\Publishers\publishers.Api\bin\Debug\net6.0\publishers.Domain.pdb
+C:\Users\elyos\OneDrive\Escritorio\Mierdas en cantidad\New folder\Publishers\publishers.Api\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\elyos\OneDrive\Escritorio\Mierdas en cantidad\New folder\Publishers\publishers.Api\bin\Debug\net6.0\publishers.Application.dll
+C:\Users\elyos\OneDrive\Escritorio\Mierdas en cantidad\New folder\Publishers\publishers.Api\bin\Debug\net6.0\publishers.Application.pdb

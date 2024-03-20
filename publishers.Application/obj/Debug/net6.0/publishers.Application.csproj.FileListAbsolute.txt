@@ -10,3 +10,9 @@ C:\Users\elyos\OneDrive\Escritorio\Mierdas en cantidad\New folder\Publishers\pub
 C:\Users\elyos\OneDrive\Escritorio\Mierdas en cantidad\New folder\Publishers\publishers.Application\obj\Debug\net6.0\refint\publishers.Application.dll
 C:\Users\elyos\OneDrive\Escritorio\Mierdas en cantidad\New folder\Publishers\publishers.Application\obj\Debug\net6.0\publishers.Application.pdb
 C:\Users\elyos\OneDrive\Escritorio\Mierdas en cantidad\New folder\Publishers\publishers.Application\obj\Debug\net6.0\ref\publishers.Application.dll
+C:\Users\elyos\OneDrive\Escritorio\Mierdas en cantidad\New folder\Publishers\publishers.Application\bin\Debug\net6.0\publishers.Domain.dll
+C:\Users\elyos\OneDrive\Escritorio\Mierdas en cantidad\New folder\Publishers\publishers.Application\bin\Debug\net6.0\publishers.Infrastructure.dll
+C:\Users\elyos\OneDrive\Escritorio\Mierdas en cantidad\New folder\Publishers\publishers.Application\bin\Debug\net6.0\publishers.Infrastructure.pdb
+C:\Users\elyos\OneDrive\Escritorio\Mierdas en cantidad\New folder\Publishers\publishers.Application\bin\Debug\net6.0\publishers.Domain.pdb
+C:\Users\elyos\OneDrive\Escritorio\Mierdas en cantidad\New folder\Publishers\publishers.Application\obj\Debug\net6.0\publishers.Application.csproj.AssemblyReference.cache
+C:\Users\elyos\OneDrive\Escritorio\Mierdas en cantidad\New folder\Publishers\publishers.Application\obj\Debug\net6.0\publishers.Application.csproj.CopyComplete

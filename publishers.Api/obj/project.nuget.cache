@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RViDy+k9J/RqyprefM8ECgdS4oGwA3mKq/PHMYIq+mijycjtwNA0Q+VzKOn4eKAe1/IGjR4gOP9RkWn2T35/Zg==",
+  "dgSpecHash": "PX93P6fIlgXWZUQY5eKyk7q0UhNya5EKSc7sek6smz1/3+ATJzr0pukm7pR+CQA37Z06JExvgUNxUn/ESxg26g==",
   "success": true,
   "projectFilePath": "C:\\Users\\elyos\\OneDrive\\Escritorio\\Mierdas en cantidad\\New folder\\Publishers\\publishers.Api\\publishers.Api.csproj",
   "expectedPackageFiles": [
@@ -19,7 +19,7 @@
     "C:\\Users\\elyos\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.1\\microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512",
     "C:\\Users\\elyos\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\elyos\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
-    "C:\\Users\\elyos\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\elyos\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.4\\microsoft.extensions.logging.abstractions.6.0.4.nupkg.sha512",
     "C:\\Users\\elyos\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\elyos\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\elyos\\.nuget\\packages\\microsoft.identity.client\\4.21.1\\microsoft.identity.client.4.21.1.nupkg.sha512",

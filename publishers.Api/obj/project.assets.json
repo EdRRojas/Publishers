@@ -267,7 +267,7 @@
           }
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
+      "Microsoft.Extensions.Logging.Abstractions/6.0.4": {
         "type": "package",
         "compile": {
           "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll": {
@@ -280,7 +280,7 @@
           }
         },
         "build": {
-          "buildTransitive/netcoreapp3.1/_._": {}
+          "buildTransitive/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.targets": {}
         }
       },
       "Microsoft.Extensions.Options/6.0.0": {
@@ -823,6 +823,20 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "publishers.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.4",
+          "publishers.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/publishers.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/publishers.Application.dll": {}
         }
       },
       "publishers.Domain/1.0.0": {
@@ -1438,10 +1452,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
-      "sha512": "/HggWBbTwy8TgebGSX5DBZ24ndhzi93sHUBDvP1IxbZD7FDokYzdAr6+vbWGjw2XAfR2EJ1sfKUotpjHnFWPxA==",
+    "Microsoft.Extensions.Logging.Abstractions/6.0.4": {
+      "sha512": "K14wYgwOfKVELrUh5eBqlC8Wvo9vvhS3ZhIvcswV2uS/ubkTRPSQsN557EZiYUSSoZNxizG+alN4wjtdyLdcyw==",
       "type": "package",
-      "path": "microsoft.extensions.logging.abstractions/6.0.0",
+      "path": "microsoft.extensions.logging.abstractions/6.0.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1476,16 +1490,16 @@
         "analyzers/dotnet/roslyn4.0/cs/tr/Microsoft.Extensions.Logging.Generators.resources.dll",
         "analyzers/dotnet/roslyn4.0/cs/zh-Hans/Microsoft.Extensions.Logging.Generators.resources.dll",
         "analyzers/dotnet/roslyn4.0/cs/zh-Hant/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "build/Microsoft.Extensions.Logging.Abstractions.targets",
         "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Logging.Abstractions.targets",
-        "buildTransitive/netcoreapp3.1/_._",
+        "buildTransitive/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.targets",
+        "buildTransitive/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.targets",
         "lib/net461/Microsoft.Extensions.Logging.Abstractions.dll",
         "lib/net461/Microsoft.Extensions.Logging.Abstractions.xml",
         "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll",
         "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
-        "microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+        "microsoft.extensions.logging.abstractions.6.0.4.nupkg.sha512",
         "microsoft.extensions.logging.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -2353,6 +2367,11 @@
         "version.txt"
       ]
     },
+    "publishers.Application/1.0.0": {
+      "type": "project",
+      "path": "../publishers.Application/publishers.Application.csproj",
+      "msbuildProject": "../publishers.Application/publishers.Application.csproj"
+    },
     "publishers.Domain/1.0.0": {
       "type": "project",
       "path": "../publishers.Domain/publishers.Domain.csproj",
@@ -2367,6 +2386,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Swashbuckle.AspNetCore >= 6.5.0",
+      "publishers.Application >= 1.0.0",
       "publishers.Infrastructure >= 1.0.0"
     ]
   },
@@ -2397,6 +2417,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\elyos\\OneDrive\\Escritorio\\Mierdas en cantidad\\New folder\\Publishers\\publishers.Application\\publishers.Application.csproj": {
+              "projectPath": "C:\\Users\\elyos\\OneDrive\\Escritorio\\Mierdas en cantidad\\New folder\\Publishers\\publishers.Application\\publishers.Application.csproj"
+            },
             "C:\\Users\\elyos\\OneDrive\\Escritorio\\Mierdas en cantidad\\New folder\\Publishers\\publishers.Infrastructure\\publishers.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\elyos\\OneDrive\\Escritorio\\Mierdas en cantidad\\New folder\\Publishers\\publishers.Infrastructure\\publishers.Infrastructure.csproj"
             }
