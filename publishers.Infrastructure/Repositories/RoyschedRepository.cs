@@ -36,11 +36,8 @@ namespace publishers.Infrastructure.Repositories
         public override void Remove(roysched entity)
         {
             try
-            {
-                if (entity == null)
-                    throw new RoyschedExection("No puede ser nulo");
-
-                var royschedToRomve = GetEntityById(entity.title_id);
+            {             
+                var royschedToRomve = entity;
 
                 royschedToRomve.UserDeleted = entity.UserDeleted;
                 royschedToRomve.Deleted = 1;
@@ -80,7 +77,7 @@ namespace publishers.Infrastructure.Repositories
 
          public override List<roysched> GetEntities()
         {
-            return base.GetEntities();
+            return base.GetEntities().Where(roy => roy.Deleted != 1).ToList();
         }
 
          public List<RoyschedModel> GetRoyschedByTitleName(string title)
@@ -90,12 +87,12 @@ namespace publishers.Infrastructure.Repositories
             {
                 royscheds = (from ro in this.contex.roysched
                              join ti in this.contex.titles on ro.title_id equals ti.title_id
-                             where ti.title_id == title
+                             where ti.Title == title
                              select new RoyschedModel()
                              {
                                  title = ti.Title,
                                  type = ti.type,
-                                 title_id = ti.title_id,
+                                 title_id = ro.title_id,
                                  price = ti.price,
                                  lorange = ro.lorange,
                                  hirange = ro.hirange,

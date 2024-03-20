@@ -1,10 +1,7 @@
 ﻿namespace publishers.Application.DTO.Roysched
 {
-    public record RoyschedDtoBase : DtoBase
+    public record RoyschedDtoBase
     {
-        public int? lorange { get; set; }
-        public int? hirange { get; set; }
-        public int? royalty { get; set; }
         public string? title_id { get; set; }
     }
 }

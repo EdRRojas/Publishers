@@ -7,8 +7,8 @@ namespace publishers.Infrastructure.Models
     {
         [Key]
         public string? Title { get; set; }
-        public string? title_id { get; set; }
         public double? price { get; set; }
         public string? type { get; set; }
+        public string? title_id { get; set; }
     }
 }

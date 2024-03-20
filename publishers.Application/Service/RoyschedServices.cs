@@ -49,21 +49,16 @@ namespace publishers.Application.Service
             
         }
 
-        public ServiceResult<bool> DeleteRoysched(RoyschedReomveDto royschedReomveDto)
+        public ServiceResult<bool> RemoveRoysched(string Id)
         {
+            
            ServiceResult<bool> result = new ServiceResult<bool>();
             try
             {
-                this.repository.Remove(new Domain.Entities.roysched()
-                {
-                    title_id = royschedReomveDto.title_id,
-                    royalty = royschedReomveDto.royalty,
-                    hirange = royschedReomveDto.hirange,
-                    lorange = royschedReomveDto.lorange,
-                    UserDeleted = royschedReomveDto.userDelete,
-                    DeleteTime = royschedReomveDto.deleteTime,
-                    Deleted = royschedReomveDto.deleted
-                });
+                var royschedToReomve = this.repository.GetEntityById(Id);
+                this.repository.Remove(royschedToReomve);
+
+                result.Message = "Se ha removido correctamente";
             }
             catch (Exception ex)
             {

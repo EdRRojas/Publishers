@@ -10,6 +10,6 @@ namespace publishers.Application.Contracts
         ServiceResult<RoyschedGetModel> GetRoyschedById(string id);
         ServiceResult<string> AddRoysched(RoyschedAddDto royschedAddDto);
         ServiceResult<bool> UpdateRoyshed(RoyschedUpdateDto royschedUpdateDto); 
-        ServiceResult<bool> DeleteRoysched(RoyschedReomveDto royschedReomveDto);
+        ServiceResult<bool> RemoveRoysched(string id);
     }
 }

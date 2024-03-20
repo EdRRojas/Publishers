@@ -8,7 +8,7 @@ namespace publishers.Domain.Core
         public BaseEntity()
         {
             CreationDate = DateTime.Now;
-            Deleted = 0;
+            Deleted = 0;//Delete 0 is not deleted/ delete 1 is deleted
 
         }
 

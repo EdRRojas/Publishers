@@ -66,10 +66,10 @@ namespace publishers.Api.Controllers
         }
 
         [HttpPost("RemoveRoysched")]
-        public IActionResult Remove([FromBody] Application.DTO.Roysched.RoyschedReomveDto royschedRemoveDto)
+        public IActionResult Remove([FromBody] string Id)
         {
 
-            var result = this.royschedService.DeleteRoysched(royschedRemoveDto);
+            var result = this.royschedService.RemoveRoysched(Id);
             if(!result.Success == true)
             {
                 return BadRequest(result);
