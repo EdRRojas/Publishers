@@ -89,6 +89,7 @@ namespace publishers.Application.Service
                     CreationDate = roysched.CreationDate,
                     CreationUser = roysched.CreationUser,
                 };
+                result.Data = royschedGetModel;
 
 
             }
