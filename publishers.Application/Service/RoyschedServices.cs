@@ -2,6 +2,7 @@
 using publishers.Application.Contracts;
 using publishers.Application.Core;
 using publishers.Application.DTO.Roysched;
+using publishers.Application.Enums.DtoEnum;
 using publishers.Application.Models;
 using publishers.Infrastructure.Interfaces;
 using publishers.Infrastructure.Models;
@@ -152,6 +153,19 @@ namespace publishers.Application.Service
             }
 
 
+            return result;
+        }
+        private ServiceResult<string> Validation(RoyschedDtoBase royschedDto, DtoAction action)
+        {
+            if(action == DtoAction.Update)
+            {
+
+            }
+            if(action == DtoAction.Save)
+            {
+
+            }
+            ServiceResult<string> result = new ServiceResult<string>();
             return result;
         }
     }
