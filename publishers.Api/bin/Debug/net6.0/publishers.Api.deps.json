@@ -9,7 +9,7 @@
       "publishers.Api/1.0.0": {
         "dependencies": {
           "Swashbuckle.AspNetCore": "6.5.0",
-          "publishers.Infrastructure": "1.0.0"
+          "publishers.Ioc": "1.0.0"
         },
         "runtime": {
           "publishers.Api.dll": {}
@@ -1442,6 +1442,14 @@
           }
         }
       },
+      "publishers.Application/1.0.0": {
+        "dependencies": {
+          "publishers.Infrastructure": "1.0.0"
+        },
+        "runtime": {
+          "publishers.Application.dll": {}
+        }
+      },
       "publishers.Domain/1.0.0": {
         "runtime": {
           "publishers.Domain.dll": {}
@@ -1465,6 +1473,14 @@
         },
         "runtime": {
           "publishers.IntegrationTest.dll": {}
+        }
+      },
+      "publishers.Ioc/1.0.0": {
+        "dependencies": {
+          "publishers.Application": "1.0.0"
+        },
+        "runtime": {
+          "publishers.Ioc.dll": {}
         }
       }
     }
@@ -2385,6 +2401,11 @@
       "path": "xunit.extensibility.execution/2.4.2",
       "hashPath": "xunit.extensibility.execution.2.4.2.nupkg.sha512"
     },
+    "publishers.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "publishers.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -2396,6 +2417,11 @@
       "sha512": ""
     },
     "publishers.IntegrationTest/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "publishers.Ioc/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

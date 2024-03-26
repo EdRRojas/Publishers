@@ -2,14 +2,15 @@
 using publishers.Application.Dtos.Titles;
 using publishers.Application.Models.Titles;
 using publishers.Domain.Entities;
+using publishers.Infrastructure.Models;
 
 namespace publishers.Application.Extentions
 {
     public static class TitlesExtentions
     {
-        public static TitlesModel ConvertEntityToModel(this Titles titles)
+        public static Models.Titles.TitlesModel ConvertEntityToModel(Titles titles)
         {
-            return new TitlesModel()
+            return new Models.Titles.TitlesModel
             {
                 title_id = titles.title_id,
                 title = titles.title,
@@ -18,10 +19,30 @@ namespace publishers.Application.Extentions
                 price = titles.price,
                 advance = titles.advance,
                 royalty = titles.royalty,
-                ytd_sales = titles.ytd_sales
+                ytd_sales = titles.ytd_sales,
+                notes = titles.notes,
+                pubdate = titles.pubdate
             };
         }
-        public static Titles ConvertDtoToGetEntity(this TitlesDtoBase titlesDtoBase)
+
+        public static Models.Titles.TitlesModel ConvertModelToModel(Infrastructure.Models.TitlesModel titlesModel)
+        {
+            return new Models.Titles.TitlesModel
+            {
+                title_id = titlesModel.title_id,
+                title = titlesModel.title,
+                type = titlesModel.type,
+                pub_id = titlesModel.pub_id,
+                price = titlesModel.price,
+                advance = titlesModel.advance,
+                royalty = titlesModel.royalty,
+                ytd_sales = titlesModel.ytd_sales,
+                notes = titlesModel.notes,
+                pubdate = titlesModel.pubdate
+            };
+        }
+
+        public static Titles ConvertDtoToGetEntity(TitlesDtoBase titlesDtoBase)
         {
             return new Titles()
             {
@@ -31,25 +52,27 @@ namespace publishers.Application.Extentions
                 price = titlesDtoBase.price,
                 advance = titlesDtoBase.advance,
                 royalty = titlesDtoBase.royalty,
-                ytd_sales = titlesDtoBase.ytd_sales
+                ytd_sales = titlesDtoBase.ytd_sales,
+                notes = titlesDtoBase.notes               
             };
         }
-        public static Titles ConvertDtoCreateToEntity(this TitlesDtoAdd titlesDtoAdd)
+        public static Titles ConvertDtoCreateToEntity(TitlesDtoAdd titlesDtoAdd)
         {
             Titles titles = ConvertDtoToGetEntity(titlesDtoAdd);
             titles.pub_id = titlesDtoAdd.pub_id;
+            titles.pubdate = titlesDtoAdd.pubdate;
             titles.creationUser = titlesDtoAdd.UserId;
             titles.creationDate = titlesDtoAdd.modifyDate;
             return titles;
         }
-        public static Titles ConvertDtoUpdateToEntity(this TitlesDtoUpdate titlesDtoUpdate)
+        public static Titles ConvertDtoUpdateToEntity(TitlesDtoUpdate titlesDtoUpdate)
         {
             Titles titles = ConvertDtoToGetEntity(titlesDtoUpdate);            
             titles.userMod = titlesDtoUpdate.UserId;
             titles.modifyDate = titlesDtoUpdate.modifyDate;
             return titles;
         }
-        public static Titles ConvertDtoDeleteToEntity(this TitlesDtoDelete titlesDtoDelete)
+        public static Titles ConvertDtoDeleteToEntity(TitlesDtoDelete titlesDtoDelete)
         {
             return new Titles()
             {

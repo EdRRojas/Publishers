@@ -2456,6 +2456,19 @@
           }
         }
       },
+      "publishers.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "publishers.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/publishers.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/publishers.Application.dll": {}
+        }
+      },
       "publishers.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2494,6 +2507,19 @@
         },
         "runtime": {
           "bin/placeholder/publishers.IntegrationTest.dll": {}
+        }
+      },
+      "publishers.Ioc/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "publishers.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/publishers.Ioc.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/publishers.Ioc.dll": {}
         }
       }
     }
@@ -7639,6 +7665,11 @@
         "xunit.extensibility.execution.nuspec"
       ]
     },
+    "publishers.Application/1.0.0": {
+      "type": "project",
+      "path": "../publishers.Application/publishers.Application.csproj",
+      "msbuildProject": "../publishers.Application/publishers.Application.csproj"
+    },
     "publishers.Domain/1.0.0": {
       "type": "project",
       "path": "../publishers.Domain/publishers.Domain.csproj",
@@ -7653,12 +7684,17 @@
       "type": "project",
       "path": "../piblishers.IntegrationTest/publishers.IntegrationTest.csproj",
       "msbuildProject": "../piblishers.IntegrationTest/publishers.IntegrationTest.csproj"
+    },
+    "publishers.Ioc/1.0.0": {
+      "type": "project",
+      "path": "../publishers.Ioc/publishers.Ioc.csproj",
+      "msbuildProject": "../publishers.Ioc/publishers.Ioc.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Swashbuckle.AspNetCore >= 6.5.0",
-      "publishers.Infrastructure >= 1.0.0"
+      "publishers.Ioc >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -7688,8 +7724,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\Visual Studio 2022\\Publishers\\publishers.Infrastructure\\publishers.Infrastructure.csproj": {
-              "projectPath": "E:\\Visual Studio 2022\\Publishers\\publishers.Infrastructure\\publishers.Infrastructure.csproj"
+            "E:\\Visual Studio 2022\\Publishers\\publishers.Ioc\\publishers.Ioc.csproj": {
+              "projectPath": "E:\\Visual Studio 2022\\Publishers\\publishers.Ioc\\publishers.Ioc.csproj"
             }
           }
         }

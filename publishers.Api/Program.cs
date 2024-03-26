@@ -1,7 +1,15 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using publishers.Application.Contract;
+using publishers.Application.Exceptions;
+using publishers.Application.Service;
+using publishers.Domain.Entities;
 using publishers.Infrastructure.Context;
+using publishers.Ioc.TitlesDependency;
 using publishers.Infrastructure.Interfaces;
 using publishers.Infrastructure.Repositories;
+using System;
+
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,9 +20,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<PubsContext>(options => 
 options.UseSqlServer(builder.Configuration.GetConnectionString("PubsContext")));
 
-//Repositories
-
-builder.Services.AddScoped<ITitlesRepository, TitlesRepository>();
+//Titles Dependencies
+builder.Services.AddTitlesDependency();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

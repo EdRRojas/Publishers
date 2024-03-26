@@ -105,7 +105,8 @@ namespace publishers.Infrastructure.Repositories
                               advance = tit.advance,
                               royalty = tit.royalty,
                               ytd_sales = tit.ytd_sales,
-                              notes = tit.notes
+                              notes = tit.notes,
+                              pubdate = tit.pubdate
                           }).FirstOrDefault();
 
                 return Title;

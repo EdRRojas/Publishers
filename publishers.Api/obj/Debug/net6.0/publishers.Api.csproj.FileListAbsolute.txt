@@ -157,3 +157,7 @@ E:\Visual Studio 2022\Publishers\publishers.Api\bin\Debug\net6.0\zh-Hant\Microso
 E:\Visual Studio 2022\Publishers\publishers.Api\bin\Debug\net6.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 E:\Visual Studio 2022\Publishers\publishers.Api\bin\Debug\net6.0\publishers.IntegrationTest.dll
 E:\Visual Studio 2022\Publishers\publishers.Api\bin\Debug\net6.0\publishers.IntegrationTest.pdb
+E:\Visual Studio 2022\Publishers\publishers.Api\bin\Debug\net6.0\publishers.Application.dll
+E:\Visual Studio 2022\Publishers\publishers.Api\bin\Debug\net6.0\publishers.Application.pdb
+E:\Visual Studio 2022\Publishers\publishers.Api\bin\Debug\net6.0\publishers.Ioc.dll
+E:\Visual Studio 2022\Publishers\publishers.Api\bin\Debug\net6.0\publishers.Ioc.pdb
