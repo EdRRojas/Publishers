@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Visual Studio 2022\\Publishers\\publishers.Web\\publishers.Web.csproj": {}
+    "E:\\Visual Studio 2022\\Publishers\\Publishers.Web\\Publishers.Web.csproj": {}
   },
   "projects": {
-    "E:\\Visual Studio 2022\\Publishers\\publishers.Web\\publishers.Web.csproj": {
+    "E:\\Visual Studio 2022\\Publishers\\Publishers.Web\\Publishers.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Visual Studio 2022\\Publishers\\publishers.Web\\publishers.Web.csproj",
-        "projectName": "publishers.Web",
-        "projectPath": "E:\\Visual Studio 2022\\Publishers\\publishers.Web\\publishers.Web.csproj",
+        "projectUniqueName": "E:\\Visual Studio 2022\\Publishers\\Publishers.Web\\Publishers.Web.csproj",
+        "projectName": "Publishers.Web",
+        "projectPath": "E:\\Visual Studio 2022\\Publishers\\Publishers.Web\\Publishers.Web.csproj",
         "packagesPath": "C:\\Users\\Para Jugar\\.nuget\\packages\\",
-        "outputPath": "E:\\Visual Studio 2022\\Publishers\\publishers.Web\\obj\\",
+        "outputPath": "E:\\Visual Studio 2022\\Publishers\\Publishers.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Para Jugar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,12 +39,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.5.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
