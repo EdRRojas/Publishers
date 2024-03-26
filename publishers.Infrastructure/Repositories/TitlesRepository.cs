@@ -242,7 +242,7 @@ namespace publishers.Infrastructure.Repositories
                          where tit.title_id == id
                          select new TitlesModel
                          {
-                             price = tit.ytd_sales
+                             ytd_sales = tit.ytd_sales
                          }
                          ).FirstOrDefault();
             }

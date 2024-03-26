@@ -1,7 +1,4 @@
 ﻿
-
-using publishers.Domain.Entities;
-
 namespace publishers.Domain.Repository
 {
     public interface IBaseRepository<TEntity, TId> where TEntity : class

@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Routing;
 using publishers.Application.Dtos.Titles;
-using publishers.Api.Models;
 using publishers.Application.Contract;
-using publishers.Domain.Entities;
-using publishers.Infrastructure.Interfaces;
+
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 

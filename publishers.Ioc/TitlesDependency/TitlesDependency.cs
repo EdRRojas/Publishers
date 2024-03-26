@@ -3,7 +3,6 @@ using publishers.Application.Contract;
 using publishers.Application.Service;
 using publishers.Infrastructure.Interfaces;
 using publishers.Infrastructure.Repositories;
-using System.Security.Cryptography.X509Certificates;
 
 namespace publishers.Ioc.TitlesDependency
 {

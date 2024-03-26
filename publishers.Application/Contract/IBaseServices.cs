@@ -1,7 +1,6 @@
 ﻿
 
 using publishers.Application.Core;
-using publishers.Application.Dtos.Titles;
 
 namespace publishers.Application.Contract
 {

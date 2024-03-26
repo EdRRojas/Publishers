@@ -287,7 +287,7 @@ namespace publishers.Application.Service
                 {
                     result.Data = new TitlesModel()
                     {
-                        price = titles.price,
+                        ytd_sales = titles.ytd_sales
                     };
                 }
 
@@ -398,7 +398,7 @@ namespace publishers.Application.Service
 
             if (action == ModelAction.TitleList)
             {
-                if (result.Data == null)
+                if (titlesModel.Data == null)
                 {
                     result = results(result, "No se ha encontrado ningun registro");
                     return result;
@@ -419,18 +419,18 @@ namespace publishers.Application.Service
                     result = results(result, "El libro especificado no esta registrado");
                     return result;
                 }
-                if (action == ModelAction.Get)
+                if (action == ModelAction.TitleSalesByID)
                 {
-                    if (this.titlesRepository.GetEntity(id).deleted == true)
+                    if (titlesModel.Data != null && titlesModel.Data.ytd_sales == null)
                     {
-                        result = results(result, "Este libro esta eliminado.");
+                        result = results(result, "Este libro no tiene ventas registradas");
                         return result;
                     }
                 }
             }
             if(action == ModelAction.TitleSalesByID)
             {
-                if (this.titlesRepository.GetTitleSalesByID(id).ytd_sales == null)
+                if (titlesModel.Data != null && titlesModel.Data.ytd_sales == null)
                 {
                     result = results(result, "Este libro no tiene ventas registradas");
                     return result;

@@ -1,8 +1,5 @@
-﻿using publishers.Application.Dtos;
-using publishers.Application.Dtos.Titles;
-using publishers.Application.Models.Titles;
+﻿using publishers.Application.Dtos.Titles;
 using publishers.Domain.Entities;
-using publishers.Infrastructure.Models;
 
 namespace publishers.Application.Extentions
 {
