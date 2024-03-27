@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "publishers.UnitTest", "publ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "publishers.IntegrationTest", "piblishers.IntegrationTest\publishers.IntegrationTest.csproj", "{364B76D3-663A-4CF5-91FE-CD35D3F6D000}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Publishers.Web", "Publishers.Web\Publishers.Web.csproj", "{A623D24F-AB15-4DCB-82C1-479D77EF36C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "publishers.Web", "Publishers.Web\publishers.Web.csproj", "{A623D24F-AB15-4DCB-82C1-479D77EF36C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

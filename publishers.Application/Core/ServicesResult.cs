@@ -3,7 +3,7 @@ namespace publishers.Application.Core
 {
     public class ServicesResult<TData>
     {
-        public ServicesResult()
+       public ServicesResult()
         {
             this.Success = true;
         }
