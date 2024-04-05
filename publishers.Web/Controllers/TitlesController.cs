@@ -1,46 +1,26 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
+﻿using Microsoft.AspNetCore.Mvc;
 using publishers.Application.Dtos.Titles;
 using publishers.Web.Models.Titles;
-using System.Net.Http;
-using System.Net.Security;
-using System.Text;
-using System.Text.Json.Serialization;
+using publishers.Web.Services;
 
 namespace publishers.Web.Controllers
 {
     public class TitlesController : Controller
     {
         HttpClientHandler httpClientHandler = new HttpClientHandler();
-        public TitlesController()
+        private readonly ITitlesServices titlesServices;
+
+        public TitlesController(ITitlesServices titlesServices)
         {
             this.httpClientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, SslPolicyError) => { return true; };
+            this.titlesServices = titlesServices;
         }
         // GET: TitlesController
         public async Task<IActionResult> Index()
         {
             var title = new TitleListResult();
 
-            using (var httpClient = new HttpClient(this.httpClientHandler))
-            {
-                var url = "http://localhost:5171/api/Titles/GetTitles";
-
-                using (var response = await httpClient.GetAsync(url))
-                {
-                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                    {
-                        string apiResponse = await response.Content.ReadAsStringAsync();
-                        title = JsonConvert.DeserializeObject<TitleListResult>(apiResponse);
-
-                        if (!title.success)
-                        {
-                            ViewBag.Message = title.message;
-                            return View();
-                        }
-                    }
-                }
-            }
+            title = await this.titlesServices.GetAll();            
 
             return View(title.data);
         }
@@ -48,27 +28,10 @@ namespace publishers.Web.Controllers
         // GET: TitlesController/Details/5
         public async Task<IActionResult> Details(string id)
         {
-            var title = new TitleDetailView(); 
-            
-            using (var httpClient = new HttpClient(this.httpClientHandler))
-            {
-                var url = $"http://localhost:5171/api/Titles/GetTitle?id={id}";
+            var title = new TitleDetailView();
 
-                using (var response = await httpClient.GetAsync(url))
-                {
-                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                    {
-                        string apiResponse = await response.Content.ReadAsStringAsync();
-                        title = JsonConvert.DeserializeObject<TitleDetailView>(apiResponse);
+            title = await this.titlesServices.Get(id);
 
-                        if (!title.success)
-                        {
-                            ViewBag.Message = title.message;
-                            return View();
-                        }
-                    }
-                }
-            }
             return View(title.data);
         }
 
@@ -86,22 +49,12 @@ namespace publishers.Web.Controllers
         {
             try
             {
-                using (var httpClient = new HttpClient(this.httpClientHandler))
+                var result = await this.titlesServices.Create(titlesDtoAdd);
+
+                if (!result.Success)
                 {
-                    var url = $"http://localhost:5171/api/Titles/CreateTitle";
-
-                    titlesDtoAdd.UserId = 20220847;
-                    titlesDtoAdd.modifyDate = DateTime.Now;
-
-                    StringContent content = new StringContent(JsonConvert.SerializeObject(titlesDtoAdd), Encoding.UTF8, "application/json");
-
-                    using (var response = await httpClient.PostAsync(url, content))
-                    {
-                        if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                        {
-                            string apiResponse = await response.Content.ReadAsStringAsync();
-                        }
-                    }
+                    ViewBag.Message = result.Message;
+                    return View();
                 }
 
                 return RedirectToAction(nameof(Index));
@@ -117,25 +70,7 @@ namespace publishers.Web.Controllers
         {
             var title = new TitleDetailView();
 
-            using (var httpClient = new HttpClient(this.httpClientHandler))
-            {
-                var url = $"http://localhost:5171/api/Titles/GetTitle?id={id}";
-
-                using (var response = await httpClient.GetAsync(url))
-                {
-                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                    {
-                        string apiResponse = await response.Content.ReadAsStringAsync();
-                        title = JsonConvert.DeserializeObject<TitleDetailView>(apiResponse);
-
-                        if (!title.success)
-                        {
-                            ViewBag.Message = title.message;
-                            return View();
-                        }
-                    }
-                }
-            }
+            title = await this.titlesServices.Get(id);
 
             return View(title.data);
         }
@@ -147,23 +82,14 @@ namespace publishers.Web.Controllers
         {
             try
             {
-                using (var httpClient = new HttpClient(this.httpClientHandler))
+                var result = await this.titlesServices.Update(titlesDtoUpdate);                
+
+                if (!result.Success)
                 {
-                    var url = $"http://localhost:5171/api/Titles/TitlesUpdate";
-
-                    titlesDtoUpdate.UserId = 20220847;
-                    titlesDtoUpdate.modifyDate = DateTime.Now; 
-
-                    StringContent content = new StringContent(JsonConvert.SerializeObject(titlesDtoUpdate), Encoding.UTF8, "application/json");
-
-                    using (var response = await httpClient.PutAsync(url, content))
-                    {
-                        if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                        {
-                            string apiResponse = await response.Content.ReadAsStringAsync();
-                        }
-                    }
+                    ViewBag.Message = result.Message;
+                    return View();
                 }
+
                 return RedirectToAction(nameof(Index));
             }
             catch
